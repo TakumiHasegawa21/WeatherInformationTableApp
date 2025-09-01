@@ -29,9 +29,22 @@
 		CB2E49B12E658F150046EC1F /* WeatherInformationTableAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherInformationTableAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		CB2E49B92E658F150046EC1F /* Exceptions for "WeatherInformationTableApp" folder in "WeatherInformationTableApp" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = CB2E49902E658F120046EC1F /* WeatherInformationTableApp */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		CB2E49932E658F120046EC1F /* WeatherInformationTableApp */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				CB2E49B92E658F150046EC1F /* Exceptions for "WeatherInformationTableApp" folder in "WeatherInformationTableApp" target */,
+			);
 			path = WeatherInformationTableApp;
 			sourceTree = "<group>";
 		};
