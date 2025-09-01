@@ -1,0 +1,2 @@
+# WeatherInformationTableApp
+お天気情報を一覧表示するミニアプリです
