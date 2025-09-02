@@ -65,15 +65,11 @@
 		};
 		CB2E49AA2E658F150046EC1F /* WeatherInformationTableAppTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-			);
 			path = WeatherInformationTableAppTests;
 			sourceTree = "<group>";
 		};
 		CB2E49B42E658F150046EC1F /* WeatherInformationTableAppUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-			);
 			path = WeatherInformationTableAppUITests;
 			sourceTree = "<group>";
 		};
@@ -117,7 +113,6 @@
 				014539B19819B1326114F2AA /* Pods-WeatherInformationTableAppTests.debug.xcconfig */,
 				5289650642EA2B2C95309DCC /* Pods-WeatherInformationTableAppTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
