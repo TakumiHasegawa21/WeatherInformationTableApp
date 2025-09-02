@@ -13,9 +13,7 @@ final class WeatherManagementViewController: UIViewController {
     @IBOutlet private weak var weatherPointTextField: UITextField!
     @IBOutlet private weak var weatherTableView: UITableView! {
         didSet {
-            weatherTableView.estimatedRowHeight = 190
-            weatherTableView.rowHeight = UITableView.automaticDimension
-            weatherTableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 48, right: 0)
+            weatherTableView.rowHeight = 190
             weatherTableView.registerCell(WeatherInformationTableViewCell.self)
         }
     }
