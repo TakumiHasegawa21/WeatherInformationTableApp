@@ -7,12 +7,14 @@
 
 import UIKit
 
-class WeatherManagementViewController: UIViewController {
-
+final class WeatherManagementViewController: UIViewController {
+    
+    // MARK: - Dependency
+    @IBOutlet private weak var weatherPointTextField: UITextField!
+    
+    // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
 }

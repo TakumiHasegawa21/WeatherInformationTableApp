@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WeatherManagementViewController" customModule="WeatherInformationTableApp" customModuleProvider="target">
             <connections>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="weatherPointTextField" destination="cIh-Mw-Ofq" id="KXh-2v-bSq"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -18,18 +19,21 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="テスト" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fke-nj-m2s">
-                    <rect key="frame" x="162.66666666666666" y="411.66666666666669" width="68" height="29"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="天気を知りたい地名を入力してください" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cIh-Mw-Ofq">
+                    <rect key="frame" x="40" y="75" width="313" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="miG-3d-7ne"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="fke-nj-m2s" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="snJ-jN-kiJ"/>
-                <constraint firstItem="fke-nj-m2s" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="xMb-ki-XhN"/>
+                <constraint firstItem="cIh-Mw-Ofq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="3b8-fA-3fC"/>
+                <constraint firstItem="cIh-Mw-Ofq" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="pbs-8p-BRz"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="cIh-Mw-Ofq" secondAttribute="trailing" constant="40" id="vw9-67-CRt"/>
             </constraints>
             <point key="canvasLocation" x="-92" y="20"/>
         </view>
