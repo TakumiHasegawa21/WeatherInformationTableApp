@@ -7,60 +7,393 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		13E9954846E16705C8D290420F7270D2 /* Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A8A3125F621D6803057F4D4044EE12A1 /* Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2ABC68C7E8320D9559D961E0C6A7AC5B /* Pods-WeatherInformationTableAppTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A9AA25DAF9CB2D30683ED1EEE4587E5F /* Pods-WeatherInformationTableAppTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		31D74EC0D8B3662B5ECEC6FD01FF8550 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */; };
-		50D501957F8EB47D3E2C65703116BF47 /* Pods-WeatherInformationTableApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A01C455E20EEAA4B2F581C4E0372395D /* Pods-WeatherInformationTableApp-dummy.m */; };
-		94EFC5078492BF8197C157F108059F7B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */; };
-		A9166C5A32337E67BD36196C5A18DC4F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */; };
-		B92EA2F97CBA8A7FBFD20329EAC5A7C5 /* Pods-WeatherInformationTableAppTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A42EFB3024F0E9BF61C386A3DD39E525 /* Pods-WeatherInformationTableAppTests-dummy.m */; };
-		C6C89FB0C5CEBF1FB5FD66428332586D /* Pods-WeatherInformationTableApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AF3EDC353C52BD6B137FC8097C9A8F8E /* Pods-WeatherInformationTableApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D165E44019D176939433DC321C474194 /* Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E9F1D2BC6CBBC0EB8C5DF4151A7E873 /* Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests-dummy.m */; };
+		081BE03A1E31B5781725728CD5B3A9D3 /* PINAnimatedImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F4F91958A2451830C16C32BDE20C7A4 /* PINAnimatedImageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		085CED3ACE9DCAA0432BE2C6E7ACCC43 /* PINDisplayLink.h in Headers */ = {isa = PBXBuildFile; fileRef = D6449C2A6A1FCA2A31C65CAAE5FDDE12 /* PINDisplayLink.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0B19C006168E63B390CBBEA36598BFCB /* PINRemoteImageDownloadTask.m in Sources */ = {isa = PBXBuildFile; fileRef = C3EFAD0699D232C9A0564B6D1FBB4EEE /* PINRemoteImageDownloadTask.m */; };
+		0BCE359ABFFF3ED60EC28B3508B02D46 /* PINRemoteImage-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BE1F845F28CE855341D1A68D92D068E9 /* PINRemoteImage-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0EA31DF819C36B45982DC1652E3E917F /* PINResume.h in Headers */ = {isa = PBXBuildFile; fileRef = 78A66FDE43D6ADBB6986E438E358FE86 /* PINResume.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		118408724B8E4F5BD9E9D8CC9AA0982F /* PINCachedAnimatedImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 17E220DB0E5AC7FDA4A5610D94326EF0 /* PINCachedAnimatedImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		12EC391691E068491C2923DF2131314E /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C2B357061F5271F56C88EFD5D1B881E /* ImageIO.framework */; };
+		145215EB1FAC6B0D18CCC6A76B9B9A9B /* PINRequestRetryStrategy.h in Headers */ = {isa = PBXBuildFile; fileRef = ACED9D749993E479CF2CB11807CD417F /* PINRequestRetryStrategy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1EA2FB9D63A0A4505DB4966887EAC8D2 /* PINCache+PINRemoteImageCaching.h in Headers */ = {isa = PBXBuildFile; fileRef = DF11EB554481B3F5E851B45AB36B5D41 /* PINCache+PINRemoteImageCaching.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22311F772C1B103E494F988044A2C770 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BFE109D10EA84B31161ED5EB6F3227C /* Accelerate.framework */; };
+		25D8ACDBECD04E186868A0D12F415532 /* PINOperationMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = D42B71F3722BDF719C79C0AE3DEE95F4 /* PINOperationMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		28A67283EDA4B7898078B23E6FCA7C79 /* PINRemoteImageManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E0E10AD91561DFB70E0C011A15C8B55B /* PINRemoteImageManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2ABC68C7E8320D9559D961E0C6A7AC5B /* Pods-WeatherInformationTableAppTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EF7E117CE0937CFA24EAE70F19E62033 /* Pods-WeatherInformationTableAppTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C63BD729B8DADF4EBBE499A2F25C1DE /* PINCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EADD8DDEF71EEB8109E231EC815BCA3 /* PINCache.m */; };
+		2DE84B3D5BABA2F810475F32390A7D2F /* PINAnimatedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 13411A2FA9C73562CDD91852579B3C8F /* PINAnimatedImageView.m */; };
+		31D74EC0D8B3662B5ECEC6FD01FF8550 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01A6A7F67EA8CA6DBCAFA7E92D011FE2 /* Foundation.framework */; };
+		3267F9840B789B64807BD9063D92F63E /* PINAnimatedImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 33D7DF58F6503CA49831783FB2782F64 /* PINAnimatedImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		32CC6FF98675AAA74C17854393BB10EB /* PINRemoteImageDownloadTask.h in Headers */ = {isa = PBXBuildFile; fileRef = FDA0AA431CF1DE4FD8DED0AB15969AF0 /* PINRemoteImageDownloadTask.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		32F1566E31D4F29E97CDA1C170B9A5F5 /* PINOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 41603F8002A774560BEA945BE41CD9C2 /* PINOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		37B10EF397586FD4163554EF47D38BE5 /* PINRemoteImageMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = EA0B6B5EA1E17E21FD7C0BA17D9BF29F /* PINRemoteImageMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		389874A668C74E1174350EB947344DF5 /* PINRemoteImageProcessorTask.h in Headers */ = {isa = PBXBuildFile; fileRef = 6833C7906811ADBBF31C39EB5EA69FB6 /* PINRemoteImageProcessorTask.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		394E5E105D0576FB32B7B52B2D3AE5E4 /* PINRemoteImage-PINRemoteImage in Resources */ = {isa = PBXBuildFile; fileRef = D0A59D10A01BE6B82AFCC220908E854B /* PINRemoteImage-PINRemoteImage */; };
+		39651BE60BE6E4EA2C4A788A8D53CF7B /* PINCache-PINCache in Resources */ = {isa = PBXBuildFile; fileRef = 81E2679F920957F4BDB8B8192F64252D /* PINCache-PINCache */; };
+		39F7F6C7012D74A1F52947226EA09F4B /* PINRemoteImage.h in Headers */ = {isa = PBXBuildFile; fileRef = B1733EDE09B80F3FCBC40EA4BF8467EE /* PINRemoteImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		434923B39660BEA1EC296BBCA40F5919 /* PINRemoteWeakProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 4706F9D805D6325D09963CEF18FA2AD6 /* PINRemoteWeakProxy.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		43B5842A035A7401D0A84F38B4525010 /* NSData+ImageDetectors.m in Sources */ = {isa = PBXBuildFile; fileRef = A681607D9C675240021BD80B33727782 /* NSData+ImageDetectors.m */; };
+		45484B997DE518B87AE3197553D7D2AE /* PINCacheMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FC9B75640CA408E1FE6BF3ED9A04B2E /* PINCacheMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4742C42D9A5C50D929AB45DBD86B21C7 /* PINMemoryCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 02315431C7ED54C5F05ED7D83B34BB42 /* PINMemoryCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4A5DD06E02817BE595826403A1EE7424 /* PINOperation-PINOperation in Resources */ = {isa = PBXBuildFile; fileRef = 887C5863E1EC081274C065FC57FE7B0E /* PINOperation-PINOperation */; };
+		4D6F8664EA6BBE27CDA6C55B907BF362 /* PINAnimatedImageView+PINRemoteImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD7A5A7FB54D530EB0F4D213C160AB9 /* PINAnimatedImageView+PINRemoteImage.m */; };
+		4DC498C753D93098C5777EECFB87632F /* PINRemoteImageBasicCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 33711CB375262CCFA4CF7CB1BF9F3D16 /* PINRemoteImageBasicCache.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		519135B91D9ED69D8FB48E1DFB6431E4 /* PINDisplayLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 220A411340FF4B5495FC562BAC7FF439 /* PINDisplayLink.m */; };
+		524628C4A984823B7363E7782A4FB449 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 1B17C35B8A6F62B7EF414FCB6E6784A8 /* PrivacyInfo.xcprivacy */; };
+		536E13BCB6F1284C9350061DCDEEB7F9 /* Pods-WeatherInformationTableApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 89F392D52D523286A1AC2FE6A589D68C /* Pods-WeatherInformationTableApp-dummy.m */; };
+		542A7925DCDD13C92BDC32658429B1EF /* PINImage+ScaledImage.h in Headers */ = {isa = PBXBuildFile; fileRef = A00BD635AC813795F4FDF5098320F9C2 /* PINImage+ScaledImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5645A0E640CC33EFB5ADC487D0910381 /* PINRemoteLock.h in Headers */ = {isa = PBXBuildFile; fileRef = 02C3A22DCA7FDCC451F37C863107748F /* PINRemoteLock.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		56C9813F6A725E35A584755FB965FA21 /* PINGIFAnimatedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B4D76CC8C1CEFE37A39A980DA454DBB /* PINGIFAnimatedImage.m */; };
+		60F94BA498563401F48B8F3CDA5294CC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01A6A7F67EA8CA6DBCAFA7E92D011FE2 /* Foundation.framework */; };
+		661D441F840E8E437DEE917908E8C559 /* PINRemoteImageManager+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 71A41564AFB8ADF9DEDC89BDD3CE6385 /* PINRemoteImageManager+Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		679B4DAF61B402D3C4E822DC15BAD39F /* PINRemoteImageManagerConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = AF6471F844FB2CCD33081AEC43070005 /* PINRemoteImageManagerConfiguration.m */; };
+		6AD290AD238DE17E45A43EC41E84A153 /* PINAlternateRepresentationProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B1CC3A5B8B80BD7BE6F9D06EDFD09EF /* PINAlternateRepresentationProvider.m */; };
+		6DE3DA7B8D80693EE7A4F253D134AEC7 /* PINRemoteImage-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C823B74E8B2650B689A849D01A8A1D /* PINRemoteImage-dummy.m */; };
+		6E82D5266D3612D5AE174F541E38592C /* PINDiskCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA27FE7F6DAE035BECF0B9C1CCED6E3 /* PINDiskCache.m */; settings = {COMPILER_FLAGS = "-fobjc-arc-exceptions"; }; };
+		704987D9A94356BFAEB8579F7FEFFF16 /* PINCacheObjectSubscripting.h in Headers */ = {isa = PBXBuildFile; fileRef = 85CDC94C7455BB2C3F76E63BCA1449C8 /* PINCacheObjectSubscripting.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		71DB92FF64A8DD3E66CBE590F6566459 /* PINAPNGAnimatedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 626295D688A6DF23672DE22ED8282DA7 /* PINAPNGAnimatedImage.m */; };
+		7319175FAC8CED4CC58F78049215392D /* PINProgressiveImage.h in Headers */ = {isa = PBXBuildFile; fileRef = D17B13013125F1C30F2F289774C84899 /* PINProgressiveImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		74718F00AD100E05FCFF20DA9231585B /* Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 29815CB5C0419B85BC76E0426A821A07 /* Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		748FA4000968DB2DF47CF318853E548E /* PINOperation-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CD019BE9F3E469DE3830FBFE90ECE372 /* PINOperation-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		762365FDC963CA904837B0B3E5ACE882 /* PINAPNGAnimatedImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 33DC71E4B3593EAB49E7DA956B321C84 /* PINAPNGAnimatedImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7670270146BC906DD33551D0CAB3B66C /* PINCachedAnimatedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D3FD8FD17B56C6A236805EBCFFF967 /* PINCachedAnimatedImage.m */; };
+		7A531FB1804D176BA5CEDC17738945C8 /* PINURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C6E8694AC3F2BB455B55F22A6FD0F3D9 /* PINURLSessionManager.m */; };
+		7B7CCF5867D725BB6C2F5F22ECE106AD /* Pods-WeatherInformationTableApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 422C875CFAA89E1F5800FF96534FEC8B /* Pods-WeatherInformationTableApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7C62A419B5171511A19B071335399821 /* PINRemoteImageCallbacks.h in Headers */ = {isa = PBXBuildFile; fileRef = F7AE14009CF8364DF09A3C74AE366E89 /* PINRemoteImageCallbacks.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		81F7E528351627352C6C2D6C032B5A1E /* PINButton+PINRemoteImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B2DB22DCC9387DF0049DC38F85E505E /* PINButton+PINRemoteImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		83D110AFEB245033EA5CB2B0CD83E802 /* PINWebPAnimatedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FB5474F36197277A2828FC36407DED9 /* PINWebPAnimatedImage.m */; };
+		841055C97E172B0C86E9F7C9C9B91295 /* PINRemoteWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = F86ED165DB41FB93DA912CB34904B8BE /* PINRemoteWeakProxy.m */; };
+		841784931CBFC047A78638F3EDB50ED4 /* PINRemoteImageTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 51EBA955B417A3056360D98EF15191A9 /* PINRemoteImageTask.m */; };
+		8474E69509F9FBB8510A9D39D571B8A3 /* PINRemoteImageDownloadQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = C07A727DC82CDF0FE3915F9B9581AC29 /* PINRemoteImageDownloadQueue.m */; };
+		884E2422516EFBA683D4040667245F2A /* PINRemoteImageCategoryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D790E1B5C5AC9456E459D989D7DBD6D3 /* PINRemoteImageCategoryManager.m */; };
+		894775B4329478CBE25FDF106148B7F6 /* PINOperationQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C1692CA22A866B4D3C8693543932C25 /* PINOperationQueue.m */; };
+		89F4426E509F4F9BB31AF15AD14067E0 /* PINRemoteImageCaching.h in Headers */ = {isa = PBXBuildFile; fileRef = 7073FECD6B2CEBA73E7F848EDDB1B0A0 /* PINRemoteImageCaching.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B9C8E477EB76FDBC086BC1A3D754377 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01A6A7F67EA8CA6DBCAFA7E92D011FE2 /* Foundation.framework */; };
+		916902AEDCDF21C2D87756DEEF1A4D8E /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 8B2D33229F025B6349A3995F0F9864DC /* PrivacyInfo.xcprivacy */; };
+		93287AE57419159156A0D1417A3F5CDE /* PINRemoteImageBasicCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E3822D028904874C674855B4D2E8FAD /* PINRemoteImageBasicCache.m */; };
+		94E1EC52487D94035257B57B811ECDA3 /* PINRequestRetryStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C05269D4D3AC11D85D3DC119F78F5B5 /* PINRequestRetryStrategy.m */; };
+		95F553DCB8DDD3C5FF0634B871592232 /* PINCache-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A404ED0B3983C3CBF34558722E0245A9 /* PINCache-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		965B1CC4B44B6D33E9CCA07C48051FFD /* PINAnimatedImageView+PINRemoteImage.h in Headers */ = {isa = PBXBuildFile; fileRef = C947B75C2A4D9241E096904E4371E3DB /* PINAnimatedImageView+PINRemoteImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9D49F946EE2D35E454A94D4D79A902DB /* PINOperationQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 6780CE5983DDA8146CF5DD7A127D176B /* PINOperationQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A597B5F9267D0ECF78A4DF096E35EDC1 /* PINCache+PINRemoteImageCaching.m in Sources */ = {isa = PBXBuildFile; fileRef = 94BC1B306BD07515A2CD8FD3889AD81D /* PINCache+PINRemoteImageCaching.m */; };
+		A5EF94FDCC7A63C371493D7AAF16E49D /* PINRemoteImageProcessorTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F6B9BC6D65890FE759E5C37F43CDE0 /* PINRemoteImageProcessorTask.m */; };
+		A67F94DB6DD2C476957BE4EDC54A1465 /* PINRemoteImageMemoryContainer.h in Headers */ = {isa = PBXBuildFile; fileRef = 73291A9C402F092B637057617CABFE4E /* PINRemoteImageMemoryContainer.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A919EA6C2925C8A88DB0F0CC81D316D7 /* PINCaching.h in Headers */ = {isa = PBXBuildFile; fileRef = 0DE06E9F7411CB442E031B37A767B62F /* PINCaching.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ABDB4BB35BC035CD8658906A537D9EA1 /* PINOperationTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 386E83BD18767FF5B5BE04068D21330B /* PINOperationTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF8FBE83477582A428BE167C71DD395 /* PINWebPAnimatedImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DA7B59BA010CC903970EC0EC63B7B68 /* PINWebPAnimatedImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B5477C035F9801EB3719EB27E700E9A0 /* PINOperation-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6FB66E3943736DA46910B07377B2E1 /* PINOperation-dummy.m */; };
+		B7D751D01E0E3CAF085F6403EEF08233 /* PINCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B74E102CBF1A3052BB02724E30DF413 /* PINCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B8B0AFBC44DFDA88AF9ACBDB1045F2EA /* PINOperationGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 31B757DEF4439F9649F155424EADE0B7 /* PINOperationGroup.m */; };
+		B92EA2F97CBA8A7FBFD20329EAC5A7C5 /* Pods-WeatherInformationTableAppTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2BBE5E008B2A9BC52AA0DD56555192 /* Pods-WeatherInformationTableAppTests-dummy.m */; };
+		BA5323FECC44EC3140FEDBC8408F2A3A /* PINRemoteImageDownloadQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B2ADF8E2861846A2CCD2058A6A5EA37 /* PINRemoteImageDownloadQueue.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		BA6104B12A882CF40A940F62D4C50DFC /* PINRemoteImageTask.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E061664946F3F626AFDD750871781DD /* PINRemoteImageTask.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		BB8838E7AE4701055F5B2C404F329D17 /* NSHTTPURLResponse+MaxAge.m in Sources */ = {isa = PBXBuildFile; fileRef = C125E80F6118B681DCA1FCB40ACB5CFB /* NSHTTPURLResponse+MaxAge.m */; };
+		BFA650A86D34643B4082C95D8820F20D /* PINRemoteImageCategoryManager.h in Headers */ = {isa = PBXBuildFile; fileRef = C0369422E71120DEAE8ED20509BF3ED5 /* PINRemoteImageCategoryManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C63F307918BA13165F0923EA1989E6CF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01A6A7F67EA8CA6DBCAFA7E92D011FE2 /* Foundation.framework */; };
+		C6F1C99F10E0CA9228499CE5FBAAD506 /* PINRemoteImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 524B85B0C78AE2A2FC2C1B33514D8313 /* PINRemoteImageManager.m */; };
+		C6FF4A7EBE4DE8D4EF59CA51E15502FA /* PINOperationGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = E8C47B5DD068681BF12EFFF83AABED49 /* PINOperationGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C88A0D3E3BBB458327B20AE5AA1907E8 /* PINRemoteImageManagerConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = C392D7A7AF7C538506D8181339FE62E0 /* PINRemoteImageManagerConfiguration.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C8B5A577816A4529D3CDDA6F4ADFB11C /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 6BAADCD3526CC8301C606C6A68806329 /* PrivacyInfo.xcprivacy */; };
+		CDA832011B565252E56983BB22E2BB1E /* PINRemoteImageMemoryContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A6E4BE718951777A96618744AC88507 /* PINRemoteImageMemoryContainer.m */; };
+		D1983A790075223F80C76A35428ADDBB /* PINGIFAnimatedImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 81AED81A22FD5C5EB6152186882BFC26 /* PINGIFAnimatedImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D2C65FE5EB8E74D8781555C8BFCCE9C2 /* PINImageView+PINRemoteImage.m in Sources */ = {isa = PBXBuildFile; fileRef = E956CADC332E238584B6800B1A7297DF /* PINImageView+PINRemoteImage.m */; };
+		D67928179F5D55333F12E9ABFF96A90F /* PINRemoteImageTask+Subclassing.h in Headers */ = {isa = PBXBuildFile; fileRef = 01E33C792F92419F44019D829ABE8667 /* PINRemoteImageTask+Subclassing.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D6DCD3FBDB21323434EA6DD914D47030 /* PINImage+DecodedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E81A00B311A4B41672F11413377B02C /* PINImage+DecodedImage.m */; };
+		D92C746BF26761AB8481A589BB2D73DD /* PINURLSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = B8C1448ED39EE730E4831FEBEDA49596 /* PINURLSessionManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D99E9F930306ECEC6EB79D9267238F46 /* NSData+ImageDetectors.h in Headers */ = {isa = PBXBuildFile; fileRef = EAF3664BFCE4FC47CDF0D52D786D0128 /* NSData+ImageDetectors.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DA76D4BB9A17222CE848E52D37D412E5 /* PINRemoteLock.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DAAA6B19AEC8E2A1296725A58F5B5A9 /* PINRemoteLock.m */; };
+		DAA2B4E3622255CDCAD5C8D33C9472DE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01A6A7F67EA8CA6DBCAFA7E92D011FE2 /* Foundation.framework */; };
+		DD2DF0E82DAEED207CB43AC94F2F5DAB /* PINRemoteImageCallbacks.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F794257C21219F917740A847687AFC7 /* PINRemoteImageCallbacks.m */; };
+		DD7ED675D9EFDD17AEE6D1C7D6FCBB58 /* PINSpeedRecorder.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C881E5DB99B5487320D6D96C8A3A2AB /* PINSpeedRecorder.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		DE4614313656697671302FF2509FF8F1 /* PINRemoteImageManagerResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E34B1FBB4B00C7F00DA445BE07D06B1 /* PINRemoteImageManagerResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E3B24946E849F491ED85CB77804293F8 /* PINSpeedRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6438E503672F7AC72B53B4E43A9B53DC /* PINSpeedRecorder.m */; };
+		E43F41E314DA60FD71AF8B3240FF3C38 /* PINImage+DecodedImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 31791666628F6D127B2EC70B037CF537 /* PINImage+DecodedImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E4AD38E0ABAB9CAA2DC8C4D7043258F6 /* PINAnimatedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 89CB3E68044BBC27DC2DD21AAFA1C84E /* PINAnimatedImage.m */; };
+		E5A1B86F23BAA92432D90F48347BA2ED /* PINCache-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D55111E618CCC4F4C0F66E07244DFBA2 /* PINCache-dummy.m */; };
+		EDCEB04E8C4942CCFAEE8B28247423D9 /* PINImage+ScaledImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E67AE4A8579A2434BAA2F5C17E886F7 /* PINImage+ScaledImage.m */; };
+		EE854C7F8DBBD8A2A0E3D2B4DB1ED782 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01A6A7F67EA8CA6DBCAFA7E92D011FE2 /* Foundation.framework */; };
+		F20B855273077C539BBDE546101F9CCF /* Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 044DBC412586FAB04BED91C8518FEE24 /* Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests-dummy.m */; };
+		F3158538C8B669A99F6C1A87CFAA0310 /* PINButton+PINRemoteImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 447DF22930A03F7749D525A079364A6E /* PINButton+PINRemoteImage.m */; };
+		F32FFA44494CA9C30E333CAE7CD780D5 /* PINImageView+PINRemoteImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B17E5B91D991100B18CA7BCF77BDC73 /* PINImageView+PINRemoteImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F3ECE0466A4AFCDB6337B20F63CADD3D /* PINAlternateRepresentationProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 88A3D5EDEA8A3318886BFFBB5FD5F219 /* PINAlternateRepresentationProvider.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F54BE062FF687C1DBC430699D5004A2A /* PINProgressiveImage.m in Sources */ = {isa = PBXBuildFile; fileRef = BF98BD9F71615A5239066FA0DFE3F9E8 /* PINProgressiveImage.m */; };
+		F575B012389BF635D44CF8D25E96B0FB /* PINMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 85315BAF872A9897F2364A5CBACC0311 /* PINMemoryCache.m */; };
+		F8AF4E231C14183CFD7EEE7706678AF4 /* PINRemoteImageManagerResult.m in Sources */ = {isa = PBXBuildFile; fileRef = EFBE28C1D0269F5F248C7486246873D0 /* PINRemoteImageManagerResult.m */; };
+		F96DBFDC84081C65E49F4EC5B081F583 /* PINDiskCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 01CC659BE7EAFE2F2FF06DA55AF1FEEE /* PINDiskCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F9CD37A49B4C2E60BA4F4D4183250068 /* PINResume.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D0B2EA230F20D9B25486134A637EC7 /* PINResume.m */; };
+		FD952FD552D7113E3E772AE14BE72BD1 /* NSHTTPURLResponse+MaxAge.h in Headers */ = {isa = PBXBuildFile; fileRef = A6E56E8B61271DC45A367A4EBE8A574E /* NSHTTPURLResponse+MaxAge.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		B43F19637E7D2EDA8449BAE7FB8F377F /* PBXContainerItemProxy */ = {
+		0A931ACA370B2CD1395EBF826C389A70 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9E907DBCD0DFFCB2798BCF089066ECD7;
+			remoteInfo = "PINOperation-PINOperation";
+		};
+		10D4425AC63EEB6E08BA712F93C5F847 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 57310B016450E63387C9D64F4933E995;
+			remoteInfo = PINOperation;
+		};
+		2BC8729CFFE34712F1010C4A2EE0FDD9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E2A8B2A28D2EAB2E4CCF3B69E6792851;
+			remoteInfo = PINRemoteImage;
+		};
+		48C4CD3AEE6E81A8AB5FD2A7C18FCC77 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A927C3CD51C30012080D6CA07959B246;
+			remoteInfo = PINCache;
+		};
+		77EDCDDF586D91BFA6CFB538D0060D26 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 7A493EFA8731D239FC961687D0390EF7;
 			remoteInfo = "Pods-WeatherInformationTableApp";
 		};
+		84705A6961F0101D69C2D19366DABD3D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 57310B016450E63387C9D64F4933E995;
+			remoteInfo = PINOperation;
+		};
+		950744F85652CB06DD243A8269647B91 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A927C3CD51C30012080D6CA07959B246;
+			remoteInfo = PINCache;
+		};
+		9BA89CC130AAB45DED1A544C534A48E4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E2A8B2A28D2EAB2E4CCF3B69E6792851;
+			remoteInfo = PINRemoteImage;
+		};
+		A5FBF42DC596FC9FB6F5AF7777FC7E37 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 350C58B3683815DA44F9FA40DB8FF331;
+			remoteInfo = "PINCache-PINCache";
+		};
+		B1C45AED47945AE2AE1C1093EBAC9C00 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A927C3CD51C30012080D6CA07959B246;
+			remoteInfo = PINCache;
+		};
+		C6E809ED62BB0A5D1D01E9944C026242 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 28302250717722FE868D925C7BC6ABF8;
+			remoteInfo = "PINRemoteImage-PINRemoteImage";
+		};
+		CBECE98297176A4189EA7FB50B69A906 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 57310B016450E63387C9D64F4933E995;
+			remoteInfo = PINOperation;
+		};
+		D6DF3FF61609B5197C189AA254846FA9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 57310B016450E63387C9D64F4933E995;
+			remoteInfo = PINOperation;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00DA83110F9F8AFE402B9EF97798C94E /* Pods-WeatherInformationTableApp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WeatherInformationTableApp-acknowledgements.markdown"; sourceTree = "<group>"; };
-		123AD67CCA19C0A560DE5C2CF4E7578D /* Pods-WeatherInformationTableApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WeatherInformationTableApp-acknowledgements.plist"; sourceTree = "<group>"; };
-		20DF171A9F0DBD238911CF067CFDD817 /* Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests.modulemap"; sourceTree = "<group>"; };
-		28F3A3E527769219E803471010832624 /* Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests.release.xcconfig"; sourceTree = "<group>"; };
-		3232E0BCC2912E81A654F219408F0ACE /* Pods-WeatherInformationTableApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WeatherInformationTableApp.debug.xcconfig"; sourceTree = "<group>"; };
-		384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		581262A80DBC339582FC33EDC6B0225D /* Pods-WeatherInformationTableAppTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-WeatherInformationTableAppTests.modulemap"; sourceTree = "<group>"; };
-		5E9F1D2BC6CBBC0EB8C5DF4151A7E873 /* Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests-dummy.m"; sourceTree = "<group>"; };
-		6533A04A68A383D6094B54E76DAABE28 /* Pods-WeatherInformationTableAppTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WeatherInformationTableAppTests-Info.plist"; sourceTree = "<group>"; };
+		01A6A7F67EA8CA6DBCAFA7E92D011FE2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		01CC659BE7EAFE2F2FF06DA55AF1FEEE /* PINDiskCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINDiskCache.h; path = Source/PINDiskCache.h; sourceTree = "<group>"; };
+		01E33C792F92419F44019D829ABE8667 /* PINRemoteImageTask+Subclassing.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PINRemoteImageTask+Subclassing.h"; path = "Source/Classes/PINRemoteImageTask+Subclassing.h"; sourceTree = "<group>"; };
+		02315431C7ED54C5F05ED7D83B34BB42 /* PINMemoryCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINMemoryCache.h; path = Source/PINMemoryCache.h; sourceTree = "<group>"; };
+		02C3A22DCA7FDCC451F37C863107748F /* PINRemoteLock.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINRemoteLock.h; path = Source/Classes/PINRemoteLock.h; sourceTree = "<group>"; };
+		044DBC412586FAB04BED91C8518FEE24 /* Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests-dummy.m"; sourceTree = "<group>"; };
+		0719AE05194CA5D65A7D883A75CE9082 /* Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		08F6B9BC6D65890FE759E5C37F43CDE0 /* PINRemoteImageProcessorTask.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINRemoteImageProcessorTask.m; path = Source/Classes/PINRemoteImageProcessorTask.m; sourceTree = "<group>"; };
+		0B2DB22DCC9387DF0049DC38F85E505E /* PINButton+PINRemoteImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PINButton+PINRemoteImage.h"; path = "Source/Classes/include/PINRemoteImage/PINButton+PINRemoteImage.h"; sourceTree = "<group>"; };
+		0B74E102CBF1A3052BB02724E30DF413 /* PINCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINCache.h; path = Source/PINCache.h; sourceTree = "<group>"; };
+		0DAAA6B19AEC8E2A1296725A58F5B5A9 /* PINRemoteLock.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINRemoteLock.m; path = Source/Classes/PINRemoteLock.m; sourceTree = "<group>"; };
+		0DD7337550355231A5CA881AB20668C1 /* PINOperation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PINOperation.release.xcconfig; sourceTree = "<group>"; };
+		0DE06E9F7411CB442E031B37A767B62F /* PINCaching.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINCaching.h; path = Source/PINCaching.h; sourceTree = "<group>"; };
+		0E81A00B311A4B41672F11413377B02C /* PINImage+DecodedImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "PINImage+DecodedImage.m"; path = "Source/Classes/Categories/PINImage+DecodedImage.m"; sourceTree = "<group>"; };
+		0ECC2DE06917B950218C449558AECE51 /* PINOperation-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "PINOperation-Info.plist"; sourceTree = "<group>"; };
+		0FBE3A21BCE8B5C4C4175BD177C2C0DE /* PINCache.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = PINCache.modulemap; sourceTree = "<group>"; };
+		115A4FCB2A03922EC10B633F15359653 /* PINRemoteImage */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PINRemoteImage; path = PINRemoteImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		13411A2FA9C73562CDD91852579B3C8F /* PINAnimatedImageView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINAnimatedImageView.m; path = Source/Classes/AnimatedImages/PINAnimatedImageView.m; sourceTree = "<group>"; };
+		135FD0FE73401CDB396C01A44DBC58F6 /* ResourceBundle-PINCache-PINCache-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-PINCache-PINCache-Info.plist"; sourceTree = "<group>"; };
+		14D3FD8FD17B56C6A236805EBCFFF967 /* PINCachedAnimatedImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINCachedAnimatedImage.m; path = Source/Classes/AnimatedImages/PINCachedAnimatedImage.m; sourceTree = "<group>"; };
+		14F34C2FF1909427B624D6E82A0B54E1 /* PINRemoteImage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PINRemoteImage.debug.xcconfig; sourceTree = "<group>"; };
+		16667875706BEE1D4230EED1DEA4C280 /* PINRemoteImage-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "PINRemoteImage-Info.plist"; sourceTree = "<group>"; };
+		17E220DB0E5AC7FDA4A5610D94326EF0 /* PINCachedAnimatedImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINCachedAnimatedImage.h; path = Source/Classes/include/PINRemoteImage/PINCachedAnimatedImage.h; sourceTree = "<group>"; };
+		1A6E4BE718951777A96618744AC88507 /* PINRemoteImageMemoryContainer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINRemoteImageMemoryContainer.m; path = Source/Classes/PINRemoteImageMemoryContainer.m; sourceTree = "<group>"; };
+		1B17C35B8A6F62B7EF414FCB6E6784A8 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = Source/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		1DA7B59BA010CC903970EC0EC63B7B68 /* PINWebPAnimatedImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINWebPAnimatedImage.h; path = Source/Classes/include/PINRemoteImage/PINWebPAnimatedImage.h; sourceTree = "<group>"; };
+		1E67AE4A8579A2434BAA2F5C17E886F7 /* PINImage+ScaledImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "PINImage+ScaledImage.m"; path = "Source/Classes/Categories/PINImage+ScaledImage.m"; sourceTree = "<group>"; };
+		1FB5474F36197277A2828FC36407DED9 /* PINWebPAnimatedImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINWebPAnimatedImage.m; path = Source/Classes/AnimatedImages/PINWebPAnimatedImage.m; sourceTree = "<group>"; };
+		1FC9B75640CA408E1FE6BF3ED9A04B2E /* PINCacheMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINCacheMacros.h; path = Source/PINCacheMacros.h; sourceTree = "<group>"; };
+		220A411340FF4B5495FC562BAC7FF439 /* PINDisplayLink.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINDisplayLink.m; path = Source/Classes/PINDisplayLink.m; sourceTree = "<group>"; };
+		22C347595B1851A1E5B0A3762BB18EC9 /* PINOperation */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PINOperation; path = PINOperation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		261F0E2402E3710749C8311B4CB15622 /* PINOperation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PINOperation.debug.xcconfig; sourceTree = "<group>"; };
+		278BD6B382EC80054951C0223B8F10CB /* Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests-Info.plist"; sourceTree = "<group>"; };
+		29815CB5C0419B85BC76E0426A821A07 /* Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests-umbrella.h"; sourceTree = "<group>"; };
+		2B2ADF8E2861846A2CCD2058A6A5EA37 /* PINRemoteImageDownloadQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINRemoteImageDownloadQueue.h; path = Source/Classes/PINRemoteImageDownloadQueue.h; sourceTree = "<group>"; };
+		2C2BBE5E008B2A9BC52AA0DD56555192 /* Pods-WeatherInformationTableAppTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WeatherInformationTableAppTests-dummy.m"; sourceTree = "<group>"; };
+		2D8FACDCE60A52F1C177BC68FB96AEBF /* Pods-WeatherInformationTableApp-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WeatherInformationTableApp-frameworks.sh"; sourceTree = "<group>"; };
+		31791666628F6D127B2EC70B037CF537 /* PINImage+DecodedImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PINImage+DecodedImage.h"; path = "Source/Classes/include/PINRemoteImage/PINImage+DecodedImage.h"; sourceTree = "<group>"; };
+		31B757DEF4439F9649F155424EADE0B7 /* PINOperationGroup.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINOperationGroup.m; path = Source/PINOperationGroup.m; sourceTree = "<group>"; };
+		33711CB375262CCFA4CF7CB1BF9F3D16 /* PINRemoteImageBasicCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINRemoteImageBasicCache.h; path = Source/Classes/PINRemoteImageBasicCache.h; sourceTree = "<group>"; };
+		33D7DF58F6503CA49831783FB2782F64 /* PINAnimatedImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINAnimatedImage.h; path = Source/Classes/include/PINRemoteImage/PINAnimatedImage.h; sourceTree = "<group>"; };
+		33DC71E4B3593EAB49E7DA956B321C84 /* PINAPNGAnimatedImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINAPNGAnimatedImage.h; path = Source/Classes/include/PINRemoteImage/PINAPNGAnimatedImage.h; sourceTree = "<group>"; };
+		386E83BD18767FF5B5BE04068D21330B /* PINOperationTypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINOperationTypes.h; path = Source/PINOperationTypes.h; sourceTree = "<group>"; };
+		3D476E42C6FAF74DB49B7A269FE9DB09 /* Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		3E9171F3A59D12A822437A8CB8D781FE /* Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		3EA69F558D35F07FE4F083B39D92F1B3 /* Pods-WeatherInformationTableAppTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-WeatherInformationTableAppTests.modulemap"; sourceTree = "<group>"; };
+		41603F8002A774560BEA945BE41CD9C2 /* PINOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINOperation.h; path = Source/PINOperation.h; sourceTree = "<group>"; };
+		422C875CFAA89E1F5800FF96534FEC8B /* Pods-WeatherInformationTableApp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WeatherInformationTableApp-umbrella.h"; sourceTree = "<group>"; };
+		43E7C5AEBD4FB11566FC2E4E0FDC647C /* Pods-WeatherInformationTableApp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WeatherInformationTableApp-acknowledgements.markdown"; sourceTree = "<group>"; };
+		447DF22930A03F7749D525A079364A6E /* PINButton+PINRemoteImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "PINButton+PINRemoteImage.m"; path = "Source/Classes/ImageCategories/PINButton+PINRemoteImage.m"; sourceTree = "<group>"; };
+		4706F9D805D6325D09963CEF18FA2AD6 /* PINRemoteWeakProxy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINRemoteWeakProxy.h; path = Source/Classes/PINRemoteWeakProxy.h; sourceTree = "<group>"; };
+		4B17E5B91D991100B18CA7BCF77BDC73 /* PINImageView+PINRemoteImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PINImageView+PINRemoteImage.h"; path = "Source/Classes/include/PINRemoteImage/PINImageView+PINRemoteImage.h"; sourceTree = "<group>"; };
+		4F4F91958A2451830C16C32BDE20C7A4 /* PINAnimatedImageView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINAnimatedImageView.h; path = Source/Classes/include/PINRemoteImage/PINAnimatedImageView.h; sourceTree = "<group>"; };
+		51EBA955B417A3056360D98EF15191A9 /* PINRemoteImageTask.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINRemoteImageTask.m; path = Source/Classes/PINRemoteImageTask.m; sourceTree = "<group>"; };
+		524B85B0C78AE2A2FC2C1B33514D8313 /* PINRemoteImageManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINRemoteImageManager.m; path = Source/Classes/PINRemoteImageManager.m; sourceTree = "<group>"; };
+		58E74A93F630B0FD44B2F32174A16CC3 /* Pods-WeatherInformationTableAppTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WeatherInformationTableAppTests-Info.plist"; sourceTree = "<group>"; };
+		5C2B357061F5271F56C88EFD5D1B881E /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/ImageIO.framework; sourceTree = DEVELOPER_DIR; };
+		5EADD8DDEF71EEB8109E231EC815BCA3 /* PINCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINCache.m; path = Source/PINCache.m; sourceTree = "<group>"; };
+		626295D688A6DF23672DE22ED8282DA7 /* PINAPNGAnimatedImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINAPNGAnimatedImage.m; path = Source/Classes/AnimatedImages/PINAPNGAnimatedImage.m; sourceTree = "<group>"; };
+		6320170E5A5A268B11CAE15D4EF6A9E3 /* PINCache */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PINCache; path = PINCache.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6438E503672F7AC72B53B4E43A9B53DC /* PINSpeedRecorder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINSpeedRecorder.m; path = Source/Classes/PINSpeedRecorder.m; sourceTree = "<group>"; };
+		6780CE5983DDA8146CF5DD7A127D176B /* PINOperationQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINOperationQueue.h; path = Source/PINOperationQueue.h; sourceTree = "<group>"; };
+		6833C7906811ADBBF31C39EB5EA69FB6 /* PINRemoteImageProcessorTask.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINRemoteImageProcessorTask.h; path = Source/Classes/PINRemoteImageProcessorTask.h; sourceTree = "<group>"; };
+		6ABF9C1608E9082B297499AB2D2BFC05 /* Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests-frameworks.sh"; sourceTree = "<group>"; };
+		6BAADCD3526CC8301C606C6A68806329 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = Source/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		6C05269D4D3AC11D85D3DC119F78F5B5 /* PINRequestRetryStrategy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINRequestRetryStrategy.m; path = Source/Classes/PINRequestRetryStrategy.m; sourceTree = "<group>"; };
+		6D9DEB6B2F9B5839F88F6D5647975E66 /* Pods-WeatherInformationTableApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WeatherInformationTableApp-acknowledgements.plist"; sourceTree = "<group>"; };
+		6E34B1FBB4B00C7F00DA445BE07D06B1 /* PINRemoteImageManagerResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINRemoteImageManagerResult.h; path = Source/Classes/include/PINRemoteImage/PINRemoteImageManagerResult.h; sourceTree = "<group>"; };
+		6E3822D028904874C674855B4D2E8FAD /* PINRemoteImageBasicCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINRemoteImageBasicCache.m; path = Source/Classes/PINRemoteImageBasicCache.m; sourceTree = "<group>"; };
+		7073FECD6B2CEBA73E7F848EDDB1B0A0 /* PINRemoteImageCaching.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINRemoteImageCaching.h; path = Source/Classes/include/PINRemoteImage/PINRemoteImageCaching.h; sourceTree = "<group>"; };
+		71A41564AFB8ADF9DEDC89BDD3CE6385 /* PINRemoteImageManager+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PINRemoteImageManager+Private.h"; path = "Source/Classes/PINRemoteImageManager+Private.h"; sourceTree = "<group>"; };
+		73291A9C402F092B637057617CABFE4E /* PINRemoteImageMemoryContainer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINRemoteImageMemoryContainer.h; path = Source/Classes/PINRemoteImageMemoryContainer.h; sourceTree = "<group>"; };
+		75D0B2EA230F20D9B25486134A637EC7 /* PINResume.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINResume.m; path = Source/Classes/PINResume.m; sourceTree = "<group>"; };
+		76D8EC839FF4DAF67363EE72B9B8F7DA /* PINRemoteImage.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = PINRemoteImage.modulemap; sourceTree = "<group>"; };
 		780D102C54E99B2348FA8A9FA843FD8F /* Pods-WeatherInformationTableApp */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-WeatherInformationTableApp"; path = Pods_WeatherInformationTableApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		83C4118888B1BAA8FB88D1814335A281 /* Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests-Info.plist"; sourceTree = "<group>"; };
-		8CC6F882573A17493B535A646B3238CD /* Pods-WeatherInformationTableApp-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WeatherInformationTableApp-Info.plist"; sourceTree = "<group>"; };
+		78A66FDE43D6ADBB6986E438E358FE86 /* PINResume.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINResume.h; path = Source/Classes/PINResume.h; sourceTree = "<group>"; };
+		7B1CC3A5B8B80BD7BE6F9D06EDFD09EF /* PINAlternateRepresentationProvider.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINAlternateRepresentationProvider.m; path = Source/Classes/PINAlternateRepresentationProvider.m; sourceTree = "<group>"; };
+		7B4D76CC8C1CEFE37A39A980DA454DBB /* PINGIFAnimatedImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINGIFAnimatedImage.m; path = Source/Classes/AnimatedImages/PINGIFAnimatedImage.m; sourceTree = "<group>"; };
+		81AED81A22FD5C5EB6152186882BFC26 /* PINGIFAnimatedImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINGIFAnimatedImage.h; path = Source/Classes/include/PINRemoteImage/PINGIFAnimatedImage.h; sourceTree = "<group>"; };
+		81E2679F920957F4BDB8B8192F64252D /* PINCache-PINCache */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "PINCache-PINCache"; path = PINCache.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		82FEB6DC54C439504DEE95AFB7CEF912 /* Pods-WeatherInformationTableApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WeatherInformationTableApp.release.xcconfig"; sourceTree = "<group>"; };
+		85315BAF872A9897F2364A5CBACC0311 /* PINMemoryCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINMemoryCache.m; path = Source/PINMemoryCache.m; sourceTree = "<group>"; };
+		85CDC94C7455BB2C3F76E63BCA1449C8 /* PINCacheObjectSubscripting.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINCacheObjectSubscripting.h; path = Source/PINCacheObjectSubscripting.h; sourceTree = "<group>"; };
+		872D3136788B228471BC17313244CA8E /* Pods-WeatherInformationTableApp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-WeatherInformationTableApp.modulemap"; sourceTree = "<group>"; };
+		887C5863E1EC081274C065FC57FE7B0E /* PINOperation-PINOperation */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "PINOperation-PINOperation"; path = PINOperation.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		88A3D5EDEA8A3318886BFFBB5FD5F219 /* PINAlternateRepresentationProvider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINAlternateRepresentationProvider.h; path = Source/Classes/include/PINRemoteImage/PINAlternateRepresentationProvider.h; sourceTree = "<group>"; };
+		89CB3E68044BBC27DC2DD21AAFA1C84E /* PINAnimatedImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINAnimatedImage.m; path = Source/Classes/AnimatedImages/PINAnimatedImage.m; sourceTree = "<group>"; };
+		89F392D52D523286A1AC2FE6A589D68C /* Pods-WeatherInformationTableApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WeatherInformationTableApp-dummy.m"; sourceTree = "<group>"; };
+		8B2D33229F025B6349A3995F0F9864DC /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = Source/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		8BFE109D10EA84B31161ED5EB6F3227C /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Accelerate.framework; sourceTree = DEVELOPER_DIR; };
+		8C1692CA22A866B4D3C8693543932C25 /* PINOperationQueue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINOperationQueue.m; path = Source/PINOperationQueue.m; sourceTree = "<group>"; };
+		8C881E5DB99B5487320D6D96C8A3A2AB /* PINSpeedRecorder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINSpeedRecorder.h; path = Source/Classes/PINSpeedRecorder.h; sourceTree = "<group>"; };
+		8CA27FE7F6DAE035BECF0B9C1CCED6E3 /* PINDiskCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINDiskCache.m; path = Source/PINDiskCache.m; sourceTree = "<group>"; };
+		8DD7A5A7FB54D530EB0F4D213C160AB9 /* PINAnimatedImageView+PINRemoteImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "PINAnimatedImageView+PINRemoteImage.m"; path = "Source/Classes/ImageCategories/PINAnimatedImageView+PINRemoteImage.m"; sourceTree = "<group>"; };
+		8E7704CE302908E7FA441B85EAC730C7 /* PINCache.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PINCache.release.xcconfig; sourceTree = "<group>"; };
+		8F794257C21219F917740A847687AFC7 /* PINRemoteImageCallbacks.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINRemoteImageCallbacks.m; path = Source/Classes/PINRemoteImageCallbacks.m; sourceTree = "<group>"; };
+		90C823B74E8B2650B689A849D01A8A1D /* PINRemoteImage-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PINRemoteImage-dummy.m"; sourceTree = "<group>"; };
+		91242468996BAFAA0D4FC8D1D34AD9AE /* PINCache-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PINCache-prefix.pch"; sourceTree = "<group>"; };
+		920A0B6FA25EDA86102DA6C6743DE792 /* PINRemoteImage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PINRemoteImage.release.xcconfig; sourceTree = "<group>"; };
+		94BC1B306BD07515A2CD8FD3889AD81D /* PINCache+PINRemoteImageCaching.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "PINCache+PINRemoteImageCaching.m"; path = "Source/Classes/PINCache/PINCache+PINRemoteImageCaching.m"; sourceTree = "<group>"; };
+		97EA1C0E566488FD530D75B78127B935 /* PINOperation-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PINOperation-prefix.pch"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A01C455E20EEAA4B2F581C4E0372395D /* Pods-WeatherInformationTableApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WeatherInformationTableApp-dummy.m"; sourceTree = "<group>"; };
-		A42EFB3024F0E9BF61C386A3DD39E525 /* Pods-WeatherInformationTableAppTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WeatherInformationTableAppTests-dummy.m"; sourceTree = "<group>"; };
-		A8A3125F621D6803057F4D4044EE12A1 /* Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests-umbrella.h"; sourceTree = "<group>"; };
-		A9AA25DAF9CB2D30683ED1EEE4587E5F /* Pods-WeatherInformationTableAppTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WeatherInformationTableAppTests-umbrella.h"; sourceTree = "<group>"; };
-		AF3EDC353C52BD6B137FC8097C9A8F8E /* Pods-WeatherInformationTableApp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WeatherInformationTableApp-umbrella.h"; sourceTree = "<group>"; };
-		B03CC80881D8D7288DEDA702FD2F759F /* Pods-WeatherInformationTableApp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-WeatherInformationTableApp.modulemap"; sourceTree = "<group>"; };
-		B4F0F0CE60F677B257E0577624EA9988 /* Pods-WeatherInformationTableAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WeatherInformationTableAppTests.release.xcconfig"; sourceTree = "<group>"; };
-		BD71EFCB812D088085239DCA53F033DC /* Pods-WeatherInformationTableAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WeatherInformationTableAppTests.debug.xcconfig"; sourceTree = "<group>"; };
-		C386B6389EC8A02BC176B918B781393D /* Pods-WeatherInformationTableAppTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WeatherInformationTableAppTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		D5D23C5F1141502B3AA18F8249599129 /* Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		9E061664946F3F626AFDD750871781DD /* PINRemoteImageTask.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINRemoteImageTask.h; path = Source/Classes/PINRemoteImageTask.h; sourceTree = "<group>"; };
+		A00BD635AC813795F4FDF5098320F9C2 /* PINImage+ScaledImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PINImage+ScaledImage.h"; path = "Source/Classes/include/PINRemoteImage/PINImage+ScaledImage.h"; sourceTree = "<group>"; };
+		A09279E4B05ED546C0C300185BD0B356 /* Pods-WeatherInformationTableApp-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WeatherInformationTableApp-Info.plist"; sourceTree = "<group>"; };
+		A404ED0B3983C3CBF34558722E0245A9 /* PINCache-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PINCache-umbrella.h"; sourceTree = "<group>"; };
+		A681607D9C675240021BD80B33727782 /* NSData+ImageDetectors.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSData+ImageDetectors.m"; path = "Source/Classes/Categories/NSData+ImageDetectors.m"; sourceTree = "<group>"; };
+		A6E56E8B61271DC45A367A4EBE8A574E /* NSHTTPURLResponse+MaxAge.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSHTTPURLResponse+MaxAge.h"; path = "Source/Classes/include/PINRemoteImage/NSHTTPURLResponse+MaxAge.h"; sourceTree = "<group>"; };
+		ACED9D749993E479CF2CB11807CD417F /* PINRequestRetryStrategy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINRequestRetryStrategy.h; path = Source/Classes/include/PINRemoteImage/PINRequestRetryStrategy.h; sourceTree = "<group>"; };
+		AF6471F844FB2CCD33081AEC43070005 /* PINRemoteImageManagerConfiguration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINRemoteImageManagerConfiguration.m; path = Source/Classes/PINRemoteImageManagerConfiguration.m; sourceTree = "<group>"; };
+		B1733EDE09B80F3FCBC40EA4BF8467EE /* PINRemoteImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINRemoteImage.h; path = Source/Classes/include/PINRemoteImage/PINRemoteImage.h; sourceTree = "<group>"; };
+		B8C1448ED39EE730E4831FEBEDA49596 /* PINURLSessionManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINURLSessionManager.h; path = Source/Classes/include/PINRemoteImage/PINURLSessionManager.h; sourceTree = "<group>"; };
+		BC8EACD05BDECBEDA1E94E3216240230 /* PINCache.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PINCache.debug.xcconfig; sourceTree = "<group>"; };
+		BE1F845F28CE855341D1A68D92D068E9 /* PINRemoteImage-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PINRemoteImage-umbrella.h"; sourceTree = "<group>"; };
+		BF98BD9F71615A5239066FA0DFE3F9E8 /* PINProgressiveImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINProgressiveImage.m; path = Source/Classes/PINProgressiveImage.m; sourceTree = "<group>"; };
+		C0369422E71120DEAE8ED20509BF3ED5 /* PINRemoteImageCategoryManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINRemoteImageCategoryManager.h; path = Source/Classes/include/PINRemoteImage/PINRemoteImageCategoryManager.h; sourceTree = "<group>"; };
+		C07A727DC82CDF0FE3915F9B9581AC29 /* PINRemoteImageDownloadQueue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINRemoteImageDownloadQueue.m; path = Source/Classes/PINRemoteImageDownloadQueue.m; sourceTree = "<group>"; };
+		C125E80F6118B681DCA1FCB40ACB5CFB /* NSHTTPURLResponse+MaxAge.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSHTTPURLResponse+MaxAge.m"; path = "Source/Classes/Categories/NSHTTPURLResponse+MaxAge.m"; sourceTree = "<group>"; };
+		C1EF8E6D2CBE5CC55D56A04E4E6941EB /* Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests.modulemap"; sourceTree = "<group>"; };
+		C392D7A7AF7C538506D8181339FE62E0 /* PINRemoteImageManagerConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINRemoteImageManagerConfiguration.h; path = Source/Classes/PINRemoteImageManagerConfiguration.h; sourceTree = "<group>"; };
+		C3EFAD0699D232C9A0564B6D1FBB4EEE /* PINRemoteImageDownloadTask.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINRemoteImageDownloadTask.m; path = Source/Classes/PINRemoteImageDownloadTask.m; sourceTree = "<group>"; };
+		C6E8694AC3F2BB455B55F22A6FD0F3D9 /* PINURLSessionManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINURLSessionManager.m; path = Source/Classes/PINURLSessionManager.m; sourceTree = "<group>"; };
+		C75079CAA8BD9CC484B38DCACC015B8C /* ResourceBundle-PINRemoteImage-PINRemoteImage-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-PINRemoteImage-PINRemoteImage-Info.plist"; sourceTree = "<group>"; };
+		C876E515E3FA8AB298A20A2AAFCD9AB7 /* Pods-WeatherInformationTableAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WeatherInformationTableAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		C947B75C2A4D9241E096904E4371E3DB /* PINAnimatedImageView+PINRemoteImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PINAnimatedImageView+PINRemoteImage.h"; path = "Source/Classes/include/PINRemoteImage/PINAnimatedImageView+PINRemoteImage.h"; sourceTree = "<group>"; };
+		CC6FB66E3943736DA46910B07377B2E1 /* PINOperation-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PINOperation-dummy.m"; sourceTree = "<group>"; };
+		CD019BE9F3E469DE3830FBFE90ECE372 /* PINOperation-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PINOperation-umbrella.h"; sourceTree = "<group>"; };
+		D0A59D10A01BE6B82AFCC220908E854B /* PINRemoteImage-PINRemoteImage */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "PINRemoteImage-PINRemoteImage"; path = PINRemoteImage.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0C538DADE2AC82D847306E66D8DEFFF /* PINCache-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "PINCache-Info.plist"; sourceTree = "<group>"; };
+		D0DD2264FB7B0394ECB6CBCEC8509F52 /* PINOperation.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = PINOperation.modulemap; sourceTree = "<group>"; };
+		D17B13013125F1C30F2F289774C84899 /* PINProgressiveImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINProgressiveImage.h; path = Source/Classes/include/PINRemoteImage/PINProgressiveImage.h; sourceTree = "<group>"; };
+		D42B71F3722BDF719C79C0AE3DEE95F4 /* PINOperationMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINOperationMacros.h; path = Source/PINOperationMacros.h; sourceTree = "<group>"; };
+		D55111E618CCC4F4C0F66E07244DFBA2 /* PINCache-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PINCache-dummy.m"; sourceTree = "<group>"; };
+		D6449C2A6A1FCA2A31C65CAAE5FDDE12 /* PINDisplayLink.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINDisplayLink.h; path = Source/Classes/PINDisplayLink.h; sourceTree = "<group>"; };
 		D653A57AB484B29CB345193CE82BC5E7 /* Pods-WeatherInformationTableAppTests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-WeatherInformationTableAppTests"; path = Pods_WeatherInformationTableAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DB1F159EC8A07FEA6B46FD34A26FC695 /* Pods-WeatherInformationTableApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WeatherInformationTableApp.release.xcconfig"; sourceTree = "<group>"; };
+		D790E1B5C5AC9456E459D989D7DBD6D3 /* PINRemoteImageCategoryManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINRemoteImageCategoryManager.m; path = Source/Classes/PINRemoteImageCategoryManager.m; sourceTree = "<group>"; };
+		DD52FC36E4235AFAB62A5436778B08BC /* Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		DF11EB554481B3F5E851B45AB36B5D41 /* PINCache+PINRemoteImageCaching.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PINCache+PINRemoteImageCaching.h"; path = "Source/Classes/include/PINRemoteImage/PINCache+PINRemoteImageCaching.h"; sourceTree = "<group>"; };
+		DF7179BF5B9784B99187E33EA4E1B463 /* Pods-WeatherInformationTableAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WeatherInformationTableAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E0E10AD91561DFB70E0C011A15C8B55B /* PINRemoteImageManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINRemoteImageManager.h; path = Source/Classes/include/PINRemoteImage/PINRemoteImageManager.h; sourceTree = "<group>"; };
 		E352E92D63FB754C477ADD8B011564D9 /* Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests"; path = Pods_WeatherInformationTableApp_WeatherInformationTableAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F375881114BC5C2DB0B60C345CC7DA29 /* Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		FB809FA31AC32279095A34E5EFACFA98 /* Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests-acknowledgements.plist"; sourceTree = "<group>"; };
-		FBB34C0E76C1379652592FDA37BCC81F /* Pods-WeatherInformationTableAppTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WeatherInformationTableAppTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		E8C47B5DD068681BF12EFFF83AABED49 /* PINOperationGroup.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINOperationGroup.h; path = Source/PINOperationGroup.h; sourceTree = "<group>"; };
+		E956CADC332E238584B6800B1A7297DF /* PINImageView+PINRemoteImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "PINImageView+PINRemoteImage.m"; path = "Source/Classes/ImageCategories/PINImageView+PINRemoteImage.m"; sourceTree = "<group>"; };
+		EA0B6B5EA1E17E21FD7C0BA17D9BF29F /* PINRemoteImageMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINRemoteImageMacros.h; path = Source/Classes/include/PINRemoteImage/PINRemoteImageMacros.h; sourceTree = "<group>"; };
+		EAF3664BFCE4FC47CDF0D52D786D0128 /* NSData+ImageDetectors.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSData+ImageDetectors.h"; path = "Source/Classes/include/PINRemoteImage/NSData+ImageDetectors.h"; sourceTree = "<group>"; };
+		EB3CF59C0E0E89A420257F8BC5A8D29A /* Pods-WeatherInformationTableApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WeatherInformationTableApp.debug.xcconfig"; sourceTree = "<group>"; };
+		EBF4F61428DD62B41584DA157AEA07AA /* Pods-WeatherInformationTableAppTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WeatherInformationTableAppTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		EEA93DA0631D105E8ED150972F61DC9B /* Pods-WeatherInformationTableAppTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WeatherInformationTableAppTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		EF7E117CE0937CFA24EAE70F19E62033 /* Pods-WeatherInformationTableAppTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WeatherInformationTableAppTests-umbrella.h"; sourceTree = "<group>"; };
+		EFBE28C1D0269F5F248C7486246873D0 /* PINRemoteImageManagerResult.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINRemoteImageManagerResult.m; path = Source/Classes/PINRemoteImageManagerResult.m; sourceTree = "<group>"; };
+		F7AE14009CF8364DF09A3C74AE366E89 /* PINRemoteImageCallbacks.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINRemoteImageCallbacks.h; path = Source/Classes/PINRemoteImageCallbacks.h; sourceTree = "<group>"; };
+		F86ED165DB41FB93DA912CB34904B8BE /* PINRemoteWeakProxy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINRemoteWeakProxy.m; path = Source/Classes/PINRemoteWeakProxy.m; sourceTree = "<group>"; };
+		FDA0AA431CF1DE4FD8DED0AB15969AF0 /* PINRemoteImageDownloadTask.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINRemoteImageDownloadTask.h; path = Source/Classes/PINRemoteImageDownloadTask.h; sourceTree = "<group>"; };
+		FEC9C6083C364B40006A1FAF443B5C92 /* ResourceBundle-PINOperation-PINOperation-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-PINOperation-PINOperation-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0497BA5B33AAC6BFB67855E812F48381 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22311F772C1B103E494F988044A2C770 /* Accelerate.framework in Frameworks */,
+				8B9C8E477EB76FDBC086BC1A3D754377 /* Foundation.framework in Frameworks */,
+				12EC391691E068491C2923DF2131314E /* ImageIO.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1C197392FB2CC5D3D92131244D398D78 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C63F307918BA13165F0923EA1989E6CF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		383E554E64899825DB351D7BC749CC20 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -69,28 +402,172 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DB3FC1935573A710A76DA52D8B80E9BF /* Frameworks */ = {
+		7DE04C8F3F325E1095107E129F4F3B7C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94EFC5078492BF8197C157F108059F7B /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EBFC8FAF2BF8AAD78C806C25A0128F7A /* Frameworks */ = {
+		9CB24702B36F2EB8A3BF3180CAF5A266 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9166C5A32337E67BD36196C5A18DC4F /* Foundation.framework in Frameworks */,
+				EE854C7F8DBBD8A2A0E3D2B4DB1ED782 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2909B0B9E0DE8AF5AE0A7D9083F26DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAA2B4E3622255CDCAD5C8D33C9472DE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC028EE40C641BF9BCB1C2F7FDF441C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60F94BA498563401F48B8F3CDA5294CC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7C00B7B96F04E213FF5544356AF65AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC00ED0787017D97A77E3A86B9A90342 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3E35DC39C29370E8D6ED00473FF47347 /* Products */ = {
+		03C5C200A0787E300053CFA8F53CA094 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9AB5906F409B6B1472B07732431869F8 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		09D77A2E55B2F8BF98C9EC6D4B9149D3 /* PINRemoteImage */ = {
+			isa = PBXGroup;
+			children = (
+				FA8FAAA051D0C559D9C43C7A47CEC14E /* Core */,
+				7DEF914D199F0E4F4FFCF0DF582A8C71 /* PINCache */,
+				B1CB13DBA4ACD8715A5522B56BCF8228 /* Resources */,
+				F58ED913A3E750AD8B04F32356A94A15 /* Support Files */,
+			);
+			name = PINRemoteImage;
+			path = PINRemoteImage;
+			sourceTree = "<group>";
+		};
+		1E71E4C7DCD0635EDF047FA183903E93 /* PINOperation */ = {
+			isa = PBXGroup;
+			children = (
+				41603F8002A774560BEA945BE41CD9C2 /* PINOperation.h */,
+				E8C47B5DD068681BF12EFFF83AABED49 /* PINOperationGroup.h */,
+				31B757DEF4439F9649F155424EADE0B7 /* PINOperationGroup.m */,
+				D42B71F3722BDF719C79C0AE3DEE95F4 /* PINOperationMacros.h */,
+				6780CE5983DDA8146CF5DD7A127D176B /* PINOperationQueue.h */,
+				8C1692CA22A866B4D3C8693543932C25 /* PINOperationQueue.m */,
+				386E83BD18767FF5B5BE04068D21330B /* PINOperationTypes.h */,
+				A5980D8E2A168D50DF33536F9F198702 /* Resources */,
+				A2B02171AEF957EEFDE2BE981BC87732 /* Support Files */,
+			);
+			name = PINOperation;
+			path = PINOperation;
+			sourceTree = "<group>";
+		};
+		1FAB340BC98A244C7F86E2C4099B9AB8 /* Pods-WeatherInformationTableAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				3EA69F558D35F07FE4F083B39D92F1B3 /* Pods-WeatherInformationTableAppTests.modulemap */,
+				EBF4F61428DD62B41584DA157AEA07AA /* Pods-WeatherInformationTableAppTests-acknowledgements.markdown */,
+				EEA93DA0631D105E8ED150972F61DC9B /* Pods-WeatherInformationTableAppTests-acknowledgements.plist */,
+				2C2BBE5E008B2A9BC52AA0DD56555192 /* Pods-WeatherInformationTableAppTests-dummy.m */,
+				58E74A93F630B0FD44B2F32174A16CC3 /* Pods-WeatherInformationTableAppTests-Info.plist */,
+				EF7E117CE0937CFA24EAE70F19E62033 /* Pods-WeatherInformationTableAppTests-umbrella.h */,
+				DF7179BF5B9784B99187E33EA4E1B463 /* Pods-WeatherInformationTableAppTests.debug.xcconfig */,
+				C876E515E3FA8AB298A20A2AAFCD9AB7 /* Pods-WeatherInformationTableAppTests.release.xcconfig */,
+			);
+			name = "Pods-WeatherInformationTableAppTests";
+			path = "Target Support Files/Pods-WeatherInformationTableAppTests";
+			sourceTree = "<group>";
+		};
+		288943EC21C3EF573AC6B86ED0E0119C /* PINCache */ = {
+			isa = PBXGroup;
+			children = (
+				A4FF7C7CA803588DB34EA454A48BE571 /* Arc-exception-safe */,
+				A28BC2BB71A988FD2BD6C69C7AE3D41C /* Core */,
+				77DAD15B9AAC52180717880190ACDAE8 /* Resources */,
+				EFB863343AA5A2A40E109ABE9B12378E /* Support Files */,
+			);
+			name = PINCache;
+			path = PINCache;
+			sourceTree = "<group>";
+		};
+		4B5FB13AE360446D2038B33F20785B82 /* Pods-WeatherInformationTableApp */ = {
+			isa = PBXGroup;
+			children = (
+				872D3136788B228471BC17313244CA8E /* Pods-WeatherInformationTableApp.modulemap */,
+				43E7C5AEBD4FB11566FC2E4E0FDC647C /* Pods-WeatherInformationTableApp-acknowledgements.markdown */,
+				6D9DEB6B2F9B5839F88F6D5647975E66 /* Pods-WeatherInformationTableApp-acknowledgements.plist */,
+				89F392D52D523286A1AC2FE6A589D68C /* Pods-WeatherInformationTableApp-dummy.m */,
+				2D8FACDCE60A52F1C177BC68FB96AEBF /* Pods-WeatherInformationTableApp-frameworks.sh */,
+				A09279E4B05ED546C0C300185BD0B356 /* Pods-WeatherInformationTableApp-Info.plist */,
+				422C875CFAA89E1F5800FF96534FEC8B /* Pods-WeatherInformationTableApp-umbrella.h */,
+				EB3CF59C0E0E89A420257F8BC5A8D29A /* Pods-WeatherInformationTableApp.debug.xcconfig */,
+				82FEB6DC54C439504DEE95AFB7CEF912 /* Pods-WeatherInformationTableApp.release.xcconfig */,
+			);
+			name = "Pods-WeatherInformationTableApp";
+			path = "Target Support Files/Pods-WeatherInformationTableApp";
+			sourceTree = "<group>";
+		};
+		6B6C6271AB69482024422D1857CC45B8 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4B5FB13AE360446D2038B33F20785B82 /* Pods-WeatherInformationTableApp */,
+				E9CFBB3ADA102AB197CBC301124594C7 /* Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests */,
+				1FAB340BC98A244C7F86E2C4099B9AB8 /* Pods-WeatherInformationTableAppTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		77DAD15B9AAC52180717880190ACDAE8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6BAADCD3526CC8301C606C6A68806329 /* PrivacyInfo.xcprivacy */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		7DEF914D199F0E4F4FFCF0DF582A8C71 /* PINCache */ = {
+			isa = PBXGroup;
+			children = (
+				DF11EB554481B3F5E851B45AB36B5D41 /* PINCache+PINRemoteImageCaching.h */,
+				94BC1B306BD07515A2CD8FD3889AD81D /* PINCache+PINRemoteImageCaching.m */,
+			);
+			name = PINCache;
+			sourceTree = "<group>";
+		};
+		9832DDB120AD8F400B2B067E23571073 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6320170E5A5A268B11CAE15D4EF6A9E3 /* PINCache */,
+				81E2679F920957F4BDB8B8192F64252D /* PINCache-PINCache */,
+				22C347595B1851A1E5B0A3762BB18EC9 /* PINOperation */,
+				887C5863E1EC081274C065FC57FE7B0E /* PINOperation-PINOperation */,
+				115A4FCB2A03922EC10B633F15359653 /* PINRemoteImage */,
+				D0A59D10A01BE6B82AFCC220908E854B /* PINRemoteImage-PINRemoteImage */,
 				780D102C54E99B2348FA8A9FA843FD8F /* Pods-WeatherInformationTableApp */,
 				E352E92D63FB754C477ADD8B011564D9 /* Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests */,
 				D653A57AB484B29CB345193CE82BC5E7 /* Pods-WeatherInformationTableAppTests */,
@@ -98,106 +575,279 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		57EED201DCBE77D90AB6715A467745F5 /* Targets Support Files */ = {
+		9AB5906F409B6B1472B07732431869F8 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				B58F70C1E90B208A6554DDDA4798816A /* Pods-WeatherInformationTableApp */,
-				890A2F2C1D27C84FC71A495AD8920148 /* Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests */,
-				CE7C4364CC1059070D4EBDF6E844D9AD /* Pods-WeatherInformationTableAppTests */,
+				8BFE109D10EA84B31161ED5EB6F3227C /* Accelerate.framework */,
+				01A6A7F67EA8CA6DBCAFA7E92D011FE2 /* Foundation.framework */,
+				5C2B357061F5271F56C88EFD5D1B881E /* ImageIO.framework */,
 			);
-			name = "Targets Support Files";
+			name = iOS;
 			sourceTree = "<group>";
 		};
-		890A2F2C1D27C84FC71A495AD8920148 /* Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests */ = {
+		A28BC2BB71A988FD2BD6C69C7AE3D41C /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				20DF171A9F0DBD238911CF067CFDD817 /* Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests.modulemap */,
-				D5D23C5F1141502B3AA18F8249599129 /* Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests-acknowledgements.markdown */,
-				FB809FA31AC32279095A34E5EFACFA98 /* Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests-acknowledgements.plist */,
-				5E9F1D2BC6CBBC0EB8C5DF4151A7E873 /* Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests-dummy.m */,
-				83C4118888B1BAA8FB88D1814335A281 /* Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests-Info.plist */,
-				A8A3125F621D6803057F4D4044EE12A1 /* Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests-umbrella.h */,
-				F375881114BC5C2DB0B60C345CC7DA29 /* Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests.debug.xcconfig */,
-				28F3A3E527769219E803471010832624 /* Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests.release.xcconfig */,
+				0B74E102CBF1A3052BB02724E30DF413 /* PINCache.h */,
+				5EADD8DDEF71EEB8109E231EC815BCA3 /* PINCache.m */,
+				1FC9B75640CA408E1FE6BF3ED9A04B2E /* PINCacheMacros.h */,
+				85CDC94C7455BB2C3F76E63BCA1449C8 /* PINCacheObjectSubscripting.h */,
+				0DE06E9F7411CB442E031B37A767B62F /* PINCaching.h */,
+				01CC659BE7EAFE2F2FF06DA55AF1FEEE /* PINDiskCache.h */,
+				02315431C7ED54C5F05ED7D83B34BB42 /* PINMemoryCache.h */,
+				85315BAF872A9897F2364A5CBACC0311 /* PINMemoryCache.m */,
 			);
-			name = "Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests";
-			path = "Target Support Files/Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests";
+			name = Core;
 			sourceTree = "<group>";
 		};
-		B58F70C1E90B208A6554DDDA4798816A /* Pods-WeatherInformationTableApp */ = {
+		A2B02171AEF957EEFDE2BE981BC87732 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				B03CC80881D8D7288DEDA702FD2F759F /* Pods-WeatherInformationTableApp.modulemap */,
-				00DA83110F9F8AFE402B9EF97798C94E /* Pods-WeatherInformationTableApp-acknowledgements.markdown */,
-				123AD67CCA19C0A560DE5C2CF4E7578D /* Pods-WeatherInformationTableApp-acknowledgements.plist */,
-				A01C455E20EEAA4B2F581C4E0372395D /* Pods-WeatherInformationTableApp-dummy.m */,
-				8CC6F882573A17493B535A646B3238CD /* Pods-WeatherInformationTableApp-Info.plist */,
-				AF3EDC353C52BD6B137FC8097C9A8F8E /* Pods-WeatherInformationTableApp-umbrella.h */,
-				3232E0BCC2912E81A654F219408F0ACE /* Pods-WeatherInformationTableApp.debug.xcconfig */,
-				DB1F159EC8A07FEA6B46FD34A26FC695 /* Pods-WeatherInformationTableApp.release.xcconfig */,
+				D0DD2264FB7B0394ECB6CBCEC8509F52 /* PINOperation.modulemap */,
+				CC6FB66E3943736DA46910B07377B2E1 /* PINOperation-dummy.m */,
+				0ECC2DE06917B950218C449558AECE51 /* PINOperation-Info.plist */,
+				97EA1C0E566488FD530D75B78127B935 /* PINOperation-prefix.pch */,
+				CD019BE9F3E469DE3830FBFE90ECE372 /* PINOperation-umbrella.h */,
+				261F0E2402E3710749C8311B4CB15622 /* PINOperation.debug.xcconfig */,
+				0DD7337550355231A5CA881AB20668C1 /* PINOperation.release.xcconfig */,
+				FEC9C6083C364B40006A1FAF443B5C92 /* ResourceBundle-PINOperation-PINOperation-Info.plist */,
 			);
-			name = "Pods-WeatherInformationTableApp";
-			path = "Target Support Files/Pods-WeatherInformationTableApp";
+			name = "Support Files";
+			path = "../Target Support Files/PINOperation";
 			sourceTree = "<group>";
 		};
-		CE7C4364CC1059070D4EBDF6E844D9AD /* Pods-WeatherInformationTableAppTests */ = {
+		A4FF7C7CA803588DB34EA454A48BE571 /* Arc-exception-safe */ = {
 			isa = PBXGroup;
 			children = (
-				581262A80DBC339582FC33EDC6B0225D /* Pods-WeatherInformationTableAppTests.modulemap */,
-				C386B6389EC8A02BC176B918B781393D /* Pods-WeatherInformationTableAppTests-acknowledgements.markdown */,
-				FBB34C0E76C1379652592FDA37BCC81F /* Pods-WeatherInformationTableAppTests-acknowledgements.plist */,
-				A42EFB3024F0E9BF61C386A3DD39E525 /* Pods-WeatherInformationTableAppTests-dummy.m */,
-				6533A04A68A383D6094B54E76DAABE28 /* Pods-WeatherInformationTableAppTests-Info.plist */,
-				A9AA25DAF9CB2D30683ED1EEE4587E5F /* Pods-WeatherInformationTableAppTests-umbrella.h */,
-				BD71EFCB812D088085239DCA53F033DC /* Pods-WeatherInformationTableAppTests.debug.xcconfig */,
-				B4F0F0CE60F677B257E0577624EA9988 /* Pods-WeatherInformationTableAppTests.release.xcconfig */,
+				8CA27FE7F6DAE035BECF0B9C1CCED6E3 /* PINDiskCache.m */,
 			);
-			name = "Pods-WeatherInformationTableAppTests";
-			path = "Target Support Files/Pods-WeatherInformationTableAppTests";
+			name = "Arc-exception-safe";
+			sourceTree = "<group>";
+		};
+		A5980D8E2A168D50DF33536F9F198702 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8B2D33229F025B6349A3995F0F9864DC /* PrivacyInfo.xcprivacy */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		B1CB13DBA4ACD8715A5522B56BCF8228 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1B17C35B8A6F62B7EF414FCB6E6784A8 /* PrivacyInfo.xcprivacy */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				3E35DC39C29370E8D6ED00473FF47347 /* Products */,
-				57EED201DCBE77D90AB6715A467745F5 /* Targets Support Files */,
+				03C5C200A0787E300053CFA8F53CA094 /* Frameworks */,
+				D399E694D1082ABF04BF820E434295B3 /* Pods */,
+				9832DDB120AD8F400B2B067E23571073 /* Products */,
+				6B6C6271AB69482024422D1857CC45B8 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+		D399E694D1082ABF04BF820E434295B3 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E4801F62A6B08CD9B5410329F1A18FDE /* iOS */,
+				288943EC21C3EF573AC6B86ED0E0119C /* PINCache */,
+				1E71E4C7DCD0635EDF047FA183903E93 /* PINOperation */,
+				09D77A2E55B2F8BF98C9EC6D4B9149D3 /* PINRemoteImage */,
 			);
-			name = Frameworks;
+			name = Pods;
 			sourceTree = "<group>";
 		};
-		E4801F62A6B08CD9B5410329F1A18FDE /* iOS */ = {
+		E9CFBB3ADA102AB197CBC301124594C7 /* Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests */ = {
 			isa = PBXGroup;
 			children = (
-				384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */,
+				C1EF8E6D2CBE5CC55D56A04E4E6941EB /* Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests.modulemap */,
+				0719AE05194CA5D65A7D883A75CE9082 /* Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests-acknowledgements.markdown */,
+				3E9171F3A59D12A822437A8CB8D781FE /* Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests-acknowledgements.plist */,
+				044DBC412586FAB04BED91C8518FEE24 /* Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests-dummy.m */,
+				6ABF9C1608E9082B297499AB2D2BFC05 /* Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests-frameworks.sh */,
+				278BD6B382EC80054951C0223B8F10CB /* Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests-Info.plist */,
+				29815CB5C0419B85BC76E0426A821A07 /* Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests-umbrella.h */,
+				3D476E42C6FAF74DB49B7A269FE9DB09 /* Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests.debug.xcconfig */,
+				DD52FC36E4235AFAB62A5436778B08BC /* Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests.release.xcconfig */,
 			);
-			name = iOS;
+			name = "Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests";
+			path = "Target Support Files/Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests";
+			sourceTree = "<group>";
+		};
+		EFB863343AA5A2A40E109ABE9B12378E /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0FBE3A21BCE8B5C4C4175BD177C2C0DE /* PINCache.modulemap */,
+				D55111E618CCC4F4C0F66E07244DFBA2 /* PINCache-dummy.m */,
+				D0C538DADE2AC82D847306E66D8DEFFF /* PINCache-Info.plist */,
+				91242468996BAFAA0D4FC8D1D34AD9AE /* PINCache-prefix.pch */,
+				A404ED0B3983C3CBF34558722E0245A9 /* PINCache-umbrella.h */,
+				BC8EACD05BDECBEDA1E94E3216240230 /* PINCache.debug.xcconfig */,
+				8E7704CE302908E7FA441B85EAC730C7 /* PINCache.release.xcconfig */,
+				135FD0FE73401CDB396C01A44DBC58F6 /* ResourceBundle-PINCache-PINCache-Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/PINCache";
+			sourceTree = "<group>";
+		};
+		F58ED913A3E750AD8B04F32356A94A15 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				76D8EC839FF4DAF67363EE72B9B8F7DA /* PINRemoteImage.modulemap */,
+				90C823B74E8B2650B689A849D01A8A1D /* PINRemoteImage-dummy.m */,
+				16667875706BEE1D4230EED1DEA4C280 /* PINRemoteImage-Info.plist */,
+				BE1F845F28CE855341D1A68D92D068E9 /* PINRemoteImage-umbrella.h */,
+				14F34C2FF1909427B624D6E82A0B54E1 /* PINRemoteImage.debug.xcconfig */,
+				920A0B6FA25EDA86102DA6C6743DE792 /* PINRemoteImage.release.xcconfig */,
+				C75079CAA8BD9CC484B38DCACC015B8C /* ResourceBundle-PINRemoteImage-PINRemoteImage-Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/PINRemoteImage";
+			sourceTree = "<group>";
+		};
+		FA8FAAA051D0C559D9C43C7A47CEC14E /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				EAF3664BFCE4FC47CDF0D52D786D0128 /* NSData+ImageDetectors.h */,
+				A681607D9C675240021BD80B33727782 /* NSData+ImageDetectors.m */,
+				A6E56E8B61271DC45A367A4EBE8A574E /* NSHTTPURLResponse+MaxAge.h */,
+				C125E80F6118B681DCA1FCB40ACB5CFB /* NSHTTPURLResponse+MaxAge.m */,
+				88A3D5EDEA8A3318886BFFBB5FD5F219 /* PINAlternateRepresentationProvider.h */,
+				7B1CC3A5B8B80BD7BE6F9D06EDFD09EF /* PINAlternateRepresentationProvider.m */,
+				33D7DF58F6503CA49831783FB2782F64 /* PINAnimatedImage.h */,
+				89CB3E68044BBC27DC2DD21AAFA1C84E /* PINAnimatedImage.m */,
+				4F4F91958A2451830C16C32BDE20C7A4 /* PINAnimatedImageView.h */,
+				13411A2FA9C73562CDD91852579B3C8F /* PINAnimatedImageView.m */,
+				C947B75C2A4D9241E096904E4371E3DB /* PINAnimatedImageView+PINRemoteImage.h */,
+				8DD7A5A7FB54D530EB0F4D213C160AB9 /* PINAnimatedImageView+PINRemoteImage.m */,
+				33DC71E4B3593EAB49E7DA956B321C84 /* PINAPNGAnimatedImage.h */,
+				626295D688A6DF23672DE22ED8282DA7 /* PINAPNGAnimatedImage.m */,
+				0B2DB22DCC9387DF0049DC38F85E505E /* PINButton+PINRemoteImage.h */,
+				447DF22930A03F7749D525A079364A6E /* PINButton+PINRemoteImage.m */,
+				17E220DB0E5AC7FDA4A5610D94326EF0 /* PINCachedAnimatedImage.h */,
+				14D3FD8FD17B56C6A236805EBCFFF967 /* PINCachedAnimatedImage.m */,
+				D6449C2A6A1FCA2A31C65CAAE5FDDE12 /* PINDisplayLink.h */,
+				220A411340FF4B5495FC562BAC7FF439 /* PINDisplayLink.m */,
+				81AED81A22FD5C5EB6152186882BFC26 /* PINGIFAnimatedImage.h */,
+				7B4D76CC8C1CEFE37A39A980DA454DBB /* PINGIFAnimatedImage.m */,
+				31791666628F6D127B2EC70B037CF537 /* PINImage+DecodedImage.h */,
+				0E81A00B311A4B41672F11413377B02C /* PINImage+DecodedImage.m */,
+				A00BD635AC813795F4FDF5098320F9C2 /* PINImage+ScaledImage.h */,
+				1E67AE4A8579A2434BAA2F5C17E886F7 /* PINImage+ScaledImage.m */,
+				4B17E5B91D991100B18CA7BCF77BDC73 /* PINImageView+PINRemoteImage.h */,
+				E956CADC332E238584B6800B1A7297DF /* PINImageView+PINRemoteImage.m */,
+				D17B13013125F1C30F2F289774C84899 /* PINProgressiveImage.h */,
+				BF98BD9F71615A5239066FA0DFE3F9E8 /* PINProgressiveImage.m */,
+				B1733EDE09B80F3FCBC40EA4BF8467EE /* PINRemoteImage.h */,
+				33711CB375262CCFA4CF7CB1BF9F3D16 /* PINRemoteImageBasicCache.h */,
+				6E3822D028904874C674855B4D2E8FAD /* PINRemoteImageBasicCache.m */,
+				7073FECD6B2CEBA73E7F848EDDB1B0A0 /* PINRemoteImageCaching.h */,
+				F7AE14009CF8364DF09A3C74AE366E89 /* PINRemoteImageCallbacks.h */,
+				8F794257C21219F917740A847687AFC7 /* PINRemoteImageCallbacks.m */,
+				C0369422E71120DEAE8ED20509BF3ED5 /* PINRemoteImageCategoryManager.h */,
+				D790E1B5C5AC9456E459D989D7DBD6D3 /* PINRemoteImageCategoryManager.m */,
+				2B2ADF8E2861846A2CCD2058A6A5EA37 /* PINRemoteImageDownloadQueue.h */,
+				C07A727DC82CDF0FE3915F9B9581AC29 /* PINRemoteImageDownloadQueue.m */,
+				FDA0AA431CF1DE4FD8DED0AB15969AF0 /* PINRemoteImageDownloadTask.h */,
+				C3EFAD0699D232C9A0564B6D1FBB4EEE /* PINRemoteImageDownloadTask.m */,
+				EA0B6B5EA1E17E21FD7C0BA17D9BF29F /* PINRemoteImageMacros.h */,
+				E0E10AD91561DFB70E0C011A15C8B55B /* PINRemoteImageManager.h */,
+				524B85B0C78AE2A2FC2C1B33514D8313 /* PINRemoteImageManager.m */,
+				71A41564AFB8ADF9DEDC89BDD3CE6385 /* PINRemoteImageManager+Private.h */,
+				C392D7A7AF7C538506D8181339FE62E0 /* PINRemoteImageManagerConfiguration.h */,
+				AF6471F844FB2CCD33081AEC43070005 /* PINRemoteImageManagerConfiguration.m */,
+				6E34B1FBB4B00C7F00DA445BE07D06B1 /* PINRemoteImageManagerResult.h */,
+				EFBE28C1D0269F5F248C7486246873D0 /* PINRemoteImageManagerResult.m */,
+				73291A9C402F092B637057617CABFE4E /* PINRemoteImageMemoryContainer.h */,
+				1A6E4BE718951777A96618744AC88507 /* PINRemoteImageMemoryContainer.m */,
+				6833C7906811ADBBF31C39EB5EA69FB6 /* PINRemoteImageProcessorTask.h */,
+				08F6B9BC6D65890FE759E5C37F43CDE0 /* PINRemoteImageProcessorTask.m */,
+				9E061664946F3F626AFDD750871781DD /* PINRemoteImageTask.h */,
+				51EBA955B417A3056360D98EF15191A9 /* PINRemoteImageTask.m */,
+				01E33C792F92419F44019D829ABE8667 /* PINRemoteImageTask+Subclassing.h */,
+				02C3A22DCA7FDCC451F37C863107748F /* PINRemoteLock.h */,
+				0DAAA6B19AEC8E2A1296725A58F5B5A9 /* PINRemoteLock.m */,
+				4706F9D805D6325D09963CEF18FA2AD6 /* PINRemoteWeakProxy.h */,
+				F86ED165DB41FB93DA912CB34904B8BE /* PINRemoteWeakProxy.m */,
+				ACED9D749993E479CF2CB11807CD417F /* PINRequestRetryStrategy.h */,
+				6C05269D4D3AC11D85D3DC119F78F5B5 /* PINRequestRetryStrategy.m */,
+				78A66FDE43D6ADBB6986E438E358FE86 /* PINResume.h */,
+				75D0B2EA230F20D9B25486134A637EC7 /* PINResume.m */,
+				8C881E5DB99B5487320D6D96C8A3A2AB /* PINSpeedRecorder.h */,
+				6438E503672F7AC72B53B4E43A9B53DC /* PINSpeedRecorder.m */,
+				B8C1448ED39EE730E4831FEBEDA49596 /* PINURLSessionManager.h */,
+				C6E8694AC3F2BB455B55F22A6FD0F3D9 /* PINURLSessionManager.m */,
+				1DA7B59BA010CC903970EC0EC63B7B68 /* PINWebPAnimatedImage.h */,
+				1FB5474F36197277A2828FC36407DED9 /* PINWebPAnimatedImage.m */,
+			);
+			name = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		8AA7783A48717A68C923BB637A565388 /* Headers */ = {
+		648BA0DD2E1C3C6B04D301DBDC57B885 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13E9954846E16705C8D290420F7270D2 /* Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests-umbrella.h in Headers */,
+				D99E9F930306ECEC6EB79D9267238F46 /* NSData+ImageDetectors.h in Headers */,
+				FD952FD552D7113E3E772AE14BE72BD1 /* NSHTTPURLResponse+MaxAge.h in Headers */,
+				F3ECE0466A4AFCDB6337B20F63CADD3D /* PINAlternateRepresentationProvider.h in Headers */,
+				3267F9840B789B64807BD9063D92F63E /* PINAnimatedImage.h in Headers */,
+				081BE03A1E31B5781725728CD5B3A9D3 /* PINAnimatedImageView.h in Headers */,
+				965B1CC4B44B6D33E9CCA07C48051FFD /* PINAnimatedImageView+PINRemoteImage.h in Headers */,
+				762365FDC963CA904837B0B3E5ACE882 /* PINAPNGAnimatedImage.h in Headers */,
+				81F7E528351627352C6C2D6C032B5A1E /* PINButton+PINRemoteImage.h in Headers */,
+				1EA2FB9D63A0A4505DB4966887EAC8D2 /* PINCache+PINRemoteImageCaching.h in Headers */,
+				118408724B8E4F5BD9E9D8CC9AA0982F /* PINCachedAnimatedImage.h in Headers */,
+				085CED3ACE9DCAA0432BE2C6E7ACCC43 /* PINDisplayLink.h in Headers */,
+				D1983A790075223F80C76A35428ADDBB /* PINGIFAnimatedImage.h in Headers */,
+				E43F41E314DA60FD71AF8B3240FF3C38 /* PINImage+DecodedImage.h in Headers */,
+				542A7925DCDD13C92BDC32658429B1EF /* PINImage+ScaledImage.h in Headers */,
+				F32FFA44494CA9C30E333CAE7CD780D5 /* PINImageView+PINRemoteImage.h in Headers */,
+				7319175FAC8CED4CC58F78049215392D /* PINProgressiveImage.h in Headers */,
+				39F7F6C7012D74A1F52947226EA09F4B /* PINRemoteImage.h in Headers */,
+				0BCE359ABFFF3ED60EC28B3508B02D46 /* PINRemoteImage-umbrella.h in Headers */,
+				4DC498C753D93098C5777EECFB87632F /* PINRemoteImageBasicCache.h in Headers */,
+				89F4426E509F4F9BB31AF15AD14067E0 /* PINRemoteImageCaching.h in Headers */,
+				7C62A419B5171511A19B071335399821 /* PINRemoteImageCallbacks.h in Headers */,
+				BFA650A86D34643B4082C95D8820F20D /* PINRemoteImageCategoryManager.h in Headers */,
+				BA5323FECC44EC3140FEDBC8408F2A3A /* PINRemoteImageDownloadQueue.h in Headers */,
+				32CC6FF98675AAA74C17854393BB10EB /* PINRemoteImageDownloadTask.h in Headers */,
+				37B10EF397586FD4163554EF47D38BE5 /* PINRemoteImageMacros.h in Headers */,
+				28A67283EDA4B7898078B23E6FCA7C79 /* PINRemoteImageManager.h in Headers */,
+				661D441F840E8E437DEE917908E8C559 /* PINRemoteImageManager+Private.h in Headers */,
+				C88A0D3E3BBB458327B20AE5AA1907E8 /* PINRemoteImageManagerConfiguration.h in Headers */,
+				DE4614313656697671302FF2509FF8F1 /* PINRemoteImageManagerResult.h in Headers */,
+				A67F94DB6DD2C476957BE4EDC54A1465 /* PINRemoteImageMemoryContainer.h in Headers */,
+				389874A668C74E1174350EB947344DF5 /* PINRemoteImageProcessorTask.h in Headers */,
+				BA6104B12A882CF40A940F62D4C50DFC /* PINRemoteImageTask.h in Headers */,
+				D67928179F5D55333F12E9ABFF96A90F /* PINRemoteImageTask+Subclassing.h in Headers */,
+				5645A0E640CC33EFB5ADC487D0910381 /* PINRemoteLock.h in Headers */,
+				434923B39660BEA1EC296BBCA40F5919 /* PINRemoteWeakProxy.h in Headers */,
+				145215EB1FAC6B0D18CCC6A76B9B9A9B /* PINRequestRetryStrategy.h in Headers */,
+				0EA31DF819C36B45982DC1652E3E917F /* PINResume.h in Headers */,
+				DD7ED675D9EFDD17AEE6D1C7D6FCBB58 /* PINSpeedRecorder.h in Headers */,
+				D92C746BF26761AB8481A589BB2D73DD /* PINURLSessionManager.h in Headers */,
+				AEF8FBE83477582A428BE167C71DD395 /* PINWebPAnimatedImage.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9243CE6276F59B4F02FB152C10F88C35 /* Headers */ = {
+		84916EF3CCBBB93ECF04930785CEA4F9 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C6C89FB0C5CEBF1FB5FD66428332586D /* Pods-WeatherInformationTableApp-umbrella.h in Headers */,
+				B7D751D01E0E3CAF085F6403EEF08233 /* PINCache.h in Headers */,
+				95F553DCB8DDD3C5FF0634B871592232 /* PINCache-umbrella.h in Headers */,
+				45484B997DE518B87AE3197553D7D2AE /* PINCacheMacros.h in Headers */,
+				704987D9A94356BFAEB8579F7FEFFF16 /* PINCacheObjectSubscripting.h in Headers */,
+				A919EA6C2925C8A88DB0F0CC81D316D7 /* PINCaching.h in Headers */,
+				F96DBFDC84081C65E49F4EC5B081F583 /* PINDiskCache.h in Headers */,
+				4742C42D9A5C50D929AB45DBD86B21C7 /* PINMemoryCache.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,43 +859,189 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AA54F318A29D967534371FF774447091 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B7CCF5867D725BB6C2F5F22ECE106AD /* Pods-WeatherInformationTableApp-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBC5F8ADEA27268E2950B6973D61572D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74718F00AD100E05FCFF20DA9231585B /* Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D66A8C9C30846D442953840D06C12646 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32F1566E31D4F29E97CDA1C170B9A5F5 /* PINOperation.h in Headers */,
+				748FA4000968DB2DF47CF318853E548E /* PINOperation-umbrella.h in Headers */,
+				C6FF4A7EBE4DE8D4EF59CA51E15502FA /* PINOperationGroup.h in Headers */,
+				25D8ACDBECD04E186868A0D12F415532 /* PINOperationMacros.h in Headers */,
+				9D49F946EE2D35E454A94D4D79A902DB /* PINOperationQueue.h in Headers */,
+				ABDB4BB35BC035CD8658906A537D9EA1 /* PINOperationTypes.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		7A493EFA8731D239FC961687D0390EF7 /* Pods-WeatherInformationTableApp */ = {
+		28302250717722FE868D925C7BC6ABF8 /* PINRemoteImage-PINRemoteImage */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4420B513AA0B1E82A2D43EBF958CB41B /* Build configuration list for PBXNativeTarget "Pods-WeatherInformationTableApp" */;
+			buildConfigurationList = 594398784DD0CED15070564F9839F093 /* Build configuration list for PBXNativeTarget "PINRemoteImage-PINRemoteImage" */;
 			buildPhases = (
-				9243CE6276F59B4F02FB152C10F88C35 /* Headers */,
-				A044FF194316D09207399BD90CD22EE7 /* Sources */,
-				EBFC8FAF2BF8AAD78C806C25A0128F7A /* Frameworks */,
-				59F345F12288D81E56C4CF2ED440AFAE /* Resources */,
+				15288FBF1816EA3704033BB73823CE83 /* Sources */,
+				DC00ED0787017D97A77E3A86B9A90342 /* Frameworks */,
+				C3AA5B23A95047BE5C016B46E400376A /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+			);
+			name = "PINRemoteImage-PINRemoteImage";
+			productName = PINRemoteImage;
+			productReference = D0A59D10A01BE6B82AFCC220908E854B /* PINRemoteImage-PINRemoteImage */;
+			productType = "com.apple.product-type.bundle";
+		};
+		350C58B3683815DA44F9FA40DB8FF331 /* PINCache-PINCache */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 03A6F305301C98DA650E93D903AE823D /* Build configuration list for PBXNativeTarget "PINCache-PINCache" */;
+			buildPhases = (
+				08DA349298C7F2F8A441E7861783A4C9 /* Sources */,
+				D7C00B7B96F04E213FF5544356AF65AF /* Frameworks */,
+				55E3976BB85AD638EA1902E771FFA7CA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PINCache-PINCache";
+			productName = PINCache;
+			productReference = 81E2679F920957F4BDB8B8192F64252D /* PINCache-PINCache */;
+			productType = "com.apple.product-type.bundle";
+		};
+		57310B016450E63387C9D64F4933E995 /* PINOperation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 62CA0263A5D9AF3FF8A84EE0C5E7E51F /* Build configuration list for PBXNativeTarget "PINOperation" */;
+			buildPhases = (
+				D66A8C9C30846D442953840D06C12646 /* Headers */,
+				F46276B226D0A5B6A9D43BE4256B3D45 /* Sources */,
+				B2909B0B9E0DE8AF5AE0A7D9083F26DE /* Frameworks */,
+				5281B1C60DA363E125693810B22CAB6A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				03809083CC6CBA7A9A73865324C6E017 /* PBXTargetDependency */,
+			);
+			name = PINOperation;
+			productName = PINOperation;
+			productReference = 22C347595B1851A1E5B0A3762BB18EC9 /* PINOperation */;
+			productType = "com.apple.product-type.framework";
+		};
+		7A493EFA8731D239FC961687D0390EF7 /* Pods-WeatherInformationTableApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F14BD1ECF524D1AD1A835118E2B6AF68 /* Build configuration list for PBXNativeTarget "Pods-WeatherInformationTableApp" */;
+			buildPhases = (
+				AA54F318A29D967534371FF774447091 /* Headers */,
+				652E544F80B2025EABC38FAC2D9244E8 /* Sources */,
+				1C197392FB2CC5D3D92131244D398D78 /* Frameworks */,
+				21CAC35CAF089AC667B66C0B4BFD81A9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A117CD6562B67C142BFB2223247185EF /* PBXTargetDependency */,
+				01EA66EAE6447A2F1BCD267A3D3B38EA /* PBXTargetDependency */,
+				F11A566A9BA424B29AD63226DF2AB824 /* PBXTargetDependency */,
 			);
 			name = "Pods-WeatherInformationTableApp";
 			productName = Pods_WeatherInformationTableApp;
 			productReference = 780D102C54E99B2348FA8A9FA843FD8F /* Pods-WeatherInformationTableApp */;
 			productType = "com.apple.product-type.framework";
 		};
-		C8EF7A330F8D7EAE226BF9BFBC28A863 /* Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests */ = {
+		9E907DBCD0DFFCB2798BCF089066ECD7 /* PINOperation-PINOperation */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DD5AB96BD6D4F2B6CE37366727F9FDA2 /* Build configuration list for PBXNativeTarget "Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests" */;
+			buildConfigurationList = 1DC721C6DEEFA7C321C109F501D3F7FD /* Build configuration list for PBXNativeTarget "PINOperation-PINOperation" */;
 			buildPhases = (
-				8AA7783A48717A68C923BB637A565388 /* Headers */,
-				49CABC0F8700E3357B938AF5AF740265 /* Sources */,
-				DB3FC1935573A710A76DA52D8B80E9BF /* Frameworks */,
-				9BA583DBB2C508009920E140DF79B3B2 /* Resources */,
+				4B2473E73724DA9B59919B21B55EF7F3 /* Sources */,
+				7DE04C8F3F325E1095107E129F4F3B7C /* Frameworks */,
+				6F395645F5B207A5BFAEE564AA769CC1 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
+			name = "PINOperation-PINOperation";
+			productName = PINOperation;
+			productReference = 887C5863E1EC081274C065FC57FE7B0E /* PINOperation-PINOperation */;
+			productType = "com.apple.product-type.bundle";
+		};
+		A927C3CD51C30012080D6CA07959B246 /* PINCache */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8D4E5C64E2E438EC8D6525157685FC49 /* Build configuration list for PBXNativeTarget "PINCache" */;
+			buildPhases = (
+				84916EF3CCBBB93ECF04930785CEA4F9 /* Headers */,
+				3E59F1BC30F36D3DD99D8EA2DEAC13D9 /* Sources */,
+				9CB24702B36F2EB8A3BF3180CAF5A266 /* Frameworks */,
+				048439BB5CB0346CD5A5A3F26A52BBF4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ACE75EE0974CB042CF778516D94F3904 /* PBXTargetDependency */,
+				3C8EFB3A872B0DE9454CFEF95E0D87F4 /* PBXTargetDependency */,
+			);
+			name = PINCache;
+			productName = PINCache;
+			productReference = 6320170E5A5A268B11CAE15D4EF6A9E3 /* PINCache */;
+			productType = "com.apple.product-type.framework";
+		};
+		C8EF7A330F8D7EAE226BF9BFBC28A863 /* Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 410F4744BB1DE0B18C358F400E9F7224 /* Build configuration list for PBXNativeTarget "Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests" */;
+			buildPhases = (
+				BBC5F8ADEA27268E2950B6973D61572D /* Headers */,
+				F79EE4AE8F918C30638961DE768D24C9 /* Sources */,
+				BC028EE40C641BF9BCB1C2F7FDF441C7 /* Frameworks */,
+				4FCEBA39E7B6CC728C81251072860C80 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7EBB8043680BFD3A48E79270FCF1B824 /* PBXTargetDependency */,
+				B5BE5D730E19041657FB736753DA3B06 /* PBXTargetDependency */,
+				A21F80A13A761424BFC227DD4F024446 /* PBXTargetDependency */,
+			);
 			name = "Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests";
 			productName = Pods_WeatherInformationTableApp_WeatherInformationTableAppUITests;
 			productReference = E352E92D63FB754C477ADD8B011564D9 /* Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests */;
+			productType = "com.apple.product-type.framework";
+		};
+		E2A8B2A28D2EAB2E4CCF3B69E6792851 /* PINRemoteImage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9E9A28E427164F56108451C69464BF50 /* Build configuration list for PBXNativeTarget "PINRemoteImage" */;
+			buildPhases = (
+				648BA0DD2E1C3C6B04D301DBDC57B885 /* Headers */,
+				7D4BEE37BFB3A02E997E293722685378 /* Sources */,
+				0497BA5B33AAC6BFB67855E812F48381 /* Frameworks */,
+				B60BE084CA420DA23B78E0483D12A89A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E665547374A3F21C340E9142095EB055 /* PBXTargetDependency */,
+				5842F908E05A4928B7422E8316B998C0 /* PBXTargetDependency */,
+				2179176A691F4D6F2BEA3CE32E840949 /* PBXTargetDependency */,
+			);
+			name = PINRemoteImage;
+			productName = PINRemoteImage;
+			productReference = 115A4FCB2A03922EC10B633F15359653 /* PINRemoteImage */;
 			productType = "com.apple.product-type.framework";
 		};
 		E3C3EBF962FE208C26EFA03EA809DC69 /* Pods-WeatherInformationTableAppTests */ = {
@@ -260,7 +1056,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				276F688EAC5A93398BF29FB580E46E7C /* PBXTargetDependency */,
+				A2065869557D40E59C0C976D77BCA738 /* PBXTargetDependency */,
 			);
 			name = "Pods-WeatherInformationTableAppTests";
 			productName = Pods_WeatherInformationTableAppTests;
@@ -287,10 +1083,16 @@
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
 			minimizedProjectReferenceProxies = 0;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 3E35DC39C29370E8D6ED00473FF47347 /* Products */;
+			productRefGroup = 9832DDB120AD8F400B2B067E23571073 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				A927C3CD51C30012080D6CA07959B246 /* PINCache */,
+				350C58B3683815DA44F9FA40DB8FF331 /* PINCache-PINCache */,
+				57310B016450E63387C9D64F4933E995 /* PINOperation */,
+				9E907DBCD0DFFCB2798BCF089066ECD7 /* PINOperation-PINOperation */,
+				E2A8B2A28D2EAB2E4CCF3B69E6792851 /* PINRemoteImage */,
+				28302250717722FE868D925C7BC6ABF8 /* PINRemoteImage-PINRemoteImage */,
 				7A493EFA8731D239FC961687D0390EF7 /* Pods-WeatherInformationTableApp */,
 				C8EF7A330F8D7EAE226BF9BFBC28A863 /* Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests */,
 				E3C3EBF962FE208C26EFA03EA809DC69 /* Pods-WeatherInformationTableAppTests */,
@@ -299,6 +1101,14 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		048439BB5CB0346CD5A5A3F26A52BBF4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39651BE60BE6E4EA2C4A788A8D53CF7B /* PINCache-PINCache in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		148738050546C337D0C3BB5A91315215 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -306,23 +1116,77 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		59F345F12288D81E56C4CF2ED440AFAE /* Resources */ = {
+		21CAC35CAF089AC667B66C0B4BFD81A9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9BA583DBB2C508009920E140DF79B3B2 /* Resources */ = {
+		4FCEBA39E7B6CC728C81251072860C80 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5281B1C60DA363E125693810B22CAB6A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A5DD06E02817BE595826403A1EE7424 /* PINOperation-PINOperation in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55E3976BB85AD638EA1902E771FFA7CA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8B5A577816A4529D3CDDA6F4ADFB11C /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6F395645F5B207A5BFAEE564AA769CC1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				916902AEDCDF21C2D87756DEEF1A4D8E /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B60BE084CA420DA23B78E0483D12A89A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				394E5E105D0576FB32B7B52B2D3AE5E4 /* PINRemoteImage-PINRemoteImage in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3AA5B23A95047BE5C016B46E400376A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				524628C4A984823B7363E7782A4FB449 /* PrivacyInfo.xcprivacy in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		08DA349298C7F2F8A441E7861783A4C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15288FBF1816EA3704033BB73823CE83 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1534A9ED51417DFB3BE92BBE584A1C34 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -331,39 +1195,180 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		49CABC0F8700E3357B938AF5AF740265 /* Sources */ = {
+		3E59F1BC30F36D3DD99D8EA2DEAC13D9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D165E44019D176939433DC321C474194 /* Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests-dummy.m in Sources */,
+				2C63BD729B8DADF4EBBE499A2F25C1DE /* PINCache.m in Sources */,
+				E5A1B86F23BAA92432D90F48347BA2ED /* PINCache-dummy.m in Sources */,
+				6E82D5266D3612D5AE174F541E38592C /* PINDiskCache.m in Sources */,
+				F575B012389BF635D44CF8D25E96B0FB /* PINMemoryCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A044FF194316D09207399BD90CD22EE7 /* Sources */ = {
+		4B2473E73724DA9B59919B21B55EF7F3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50D501957F8EB47D3E2C65703116BF47 /* Pods-WeatherInformationTableApp-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		652E544F80B2025EABC38FAC2D9244E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				536E13BCB6F1284C9350061DCDEEB7F9 /* Pods-WeatherInformationTableApp-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D4BEE37BFB3A02E997E293722685378 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43B5842A035A7401D0A84F38B4525010 /* NSData+ImageDetectors.m in Sources */,
+				BB8838E7AE4701055F5B2C404F329D17 /* NSHTTPURLResponse+MaxAge.m in Sources */,
+				6AD290AD238DE17E45A43EC41E84A153 /* PINAlternateRepresentationProvider.m in Sources */,
+				E4AD38E0ABAB9CAA2DC8C4D7043258F6 /* PINAnimatedImage.m in Sources */,
+				2DE84B3D5BABA2F810475F32390A7D2F /* PINAnimatedImageView.m in Sources */,
+				4D6F8664EA6BBE27CDA6C55B907BF362 /* PINAnimatedImageView+PINRemoteImage.m in Sources */,
+				71DB92FF64A8DD3E66CBE590F6566459 /* PINAPNGAnimatedImage.m in Sources */,
+				F3158538C8B669A99F6C1A87CFAA0310 /* PINButton+PINRemoteImage.m in Sources */,
+				A597B5F9267D0ECF78A4DF096E35EDC1 /* PINCache+PINRemoteImageCaching.m in Sources */,
+				7670270146BC906DD33551D0CAB3B66C /* PINCachedAnimatedImage.m in Sources */,
+				519135B91D9ED69D8FB48E1DFB6431E4 /* PINDisplayLink.m in Sources */,
+				56C9813F6A725E35A584755FB965FA21 /* PINGIFAnimatedImage.m in Sources */,
+				D6DCD3FBDB21323434EA6DD914D47030 /* PINImage+DecodedImage.m in Sources */,
+				EDCEB04E8C4942CCFAEE8B28247423D9 /* PINImage+ScaledImage.m in Sources */,
+				D2C65FE5EB8E74D8781555C8BFCCE9C2 /* PINImageView+PINRemoteImage.m in Sources */,
+				F54BE062FF687C1DBC430699D5004A2A /* PINProgressiveImage.m in Sources */,
+				6DE3DA7B8D80693EE7A4F253D134AEC7 /* PINRemoteImage-dummy.m in Sources */,
+				93287AE57419159156A0D1417A3F5CDE /* PINRemoteImageBasicCache.m in Sources */,
+				DD2DF0E82DAEED207CB43AC94F2F5DAB /* PINRemoteImageCallbacks.m in Sources */,
+				884E2422516EFBA683D4040667245F2A /* PINRemoteImageCategoryManager.m in Sources */,
+				8474E69509F9FBB8510A9D39D571B8A3 /* PINRemoteImageDownloadQueue.m in Sources */,
+				0B19C006168E63B390CBBEA36598BFCB /* PINRemoteImageDownloadTask.m in Sources */,
+				C6F1C99F10E0CA9228499CE5FBAAD506 /* PINRemoteImageManager.m in Sources */,
+				679B4DAF61B402D3C4E822DC15BAD39F /* PINRemoteImageManagerConfiguration.m in Sources */,
+				F8AF4E231C14183CFD7EEE7706678AF4 /* PINRemoteImageManagerResult.m in Sources */,
+				CDA832011B565252E56983BB22E2BB1E /* PINRemoteImageMemoryContainer.m in Sources */,
+				A5EF94FDCC7A63C371493D7AAF16E49D /* PINRemoteImageProcessorTask.m in Sources */,
+				841784931CBFC047A78638F3EDB50ED4 /* PINRemoteImageTask.m in Sources */,
+				DA76D4BB9A17222CE848E52D37D412E5 /* PINRemoteLock.m in Sources */,
+				841055C97E172B0C86E9F7C9C9B91295 /* PINRemoteWeakProxy.m in Sources */,
+				94E1EC52487D94035257B57B811ECDA3 /* PINRequestRetryStrategy.m in Sources */,
+				F9CD37A49B4C2E60BA4F4D4183250068 /* PINResume.m in Sources */,
+				E3B24946E849F491ED85CB77804293F8 /* PINSpeedRecorder.m in Sources */,
+				7A531FB1804D176BA5CEDC17738945C8 /* PINURLSessionManager.m in Sources */,
+				83D110AFEB245033EA5CB2B0CD83E802 /* PINWebPAnimatedImage.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F46276B226D0A5B6A9D43BE4256B3D45 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5477C035F9801EB3719EB27E700E9A0 /* PINOperation-dummy.m in Sources */,
+				B8B0AFBC44DFDA88AF9ACBDB1045F2EA /* PINOperationGroup.m in Sources */,
+				894775B4329478CBE25FDF106148B7F6 /* PINOperationQueue.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F79EE4AE8F918C30638961DE768D24C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F20B855273077C539BBDE546101F9CCF /* Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		276F688EAC5A93398BF29FB580E46E7C /* PBXTargetDependency */ = {
+		01EA66EAE6447A2F1BCD267A3D3B38EA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PINOperation;
+			target = 57310B016450E63387C9D64F4933E995 /* PINOperation */;
+			targetProxy = 84705A6961F0101D69C2D19366DABD3D /* PBXContainerItemProxy */;
+		};
+		03809083CC6CBA7A9A73865324C6E017 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "PINOperation-PINOperation";
+			target = 9E907DBCD0DFFCB2798BCF089066ECD7 /* PINOperation-PINOperation */;
+			targetProxy = 0A931ACA370B2CD1395EBF826C389A70 /* PBXContainerItemProxy */;
+		};
+		2179176A691F4D6F2BEA3CE32E840949 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "PINRemoteImage-PINRemoteImage";
+			target = 28302250717722FE868D925C7BC6ABF8 /* PINRemoteImage-PINRemoteImage */;
+			targetProxy = C6E809ED62BB0A5D1D01E9944C026242 /* PBXContainerItemProxy */;
+		};
+		3C8EFB3A872B0DE9454CFEF95E0D87F4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PINOperation;
+			target = 57310B016450E63387C9D64F4933E995 /* PINOperation */;
+			targetProxy = D6DF3FF61609B5197C189AA254846FA9 /* PBXContainerItemProxy */;
+		};
+		5842F908E05A4928B7422E8316B998C0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PINOperation;
+			target = 57310B016450E63387C9D64F4933E995 /* PINOperation */;
+			targetProxy = CBECE98297176A4189EA7FB50B69A906 /* PBXContainerItemProxy */;
+		};
+		7EBB8043680BFD3A48E79270FCF1B824 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PINCache;
+			target = A927C3CD51C30012080D6CA07959B246 /* PINCache */;
+			targetProxy = 950744F85652CB06DD243A8269647B91 /* PBXContainerItemProxy */;
+		};
+		A117CD6562B67C142BFB2223247185EF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PINCache;
+			target = A927C3CD51C30012080D6CA07959B246 /* PINCache */;
+			targetProxy = 48C4CD3AEE6E81A8AB5FD2A7C18FCC77 /* PBXContainerItemProxy */;
+		};
+		A2065869557D40E59C0C976D77BCA738 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-WeatherInformationTableApp";
 			target = 7A493EFA8731D239FC961687D0390EF7 /* Pods-WeatherInformationTableApp */;
-			targetProxy = B43F19637E7D2EDA8449BAE7FB8F377F /* PBXContainerItemProxy */;
+			targetProxy = 77EDCDDF586D91BFA6CFB538D0060D26 /* PBXContainerItemProxy */;
+		};
+		A21F80A13A761424BFC227DD4F024446 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PINRemoteImage;
+			target = E2A8B2A28D2EAB2E4CCF3B69E6792851 /* PINRemoteImage */;
+			targetProxy = 9BA89CC130AAB45DED1A544C534A48E4 /* PBXContainerItemProxy */;
+		};
+		ACE75EE0974CB042CF778516D94F3904 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "PINCache-PINCache";
+			target = 350C58B3683815DA44F9FA40DB8FF331 /* PINCache-PINCache */;
+			targetProxy = A5FBF42DC596FC9FB6F5AF7777FC7E37 /* PBXContainerItemProxy */;
+		};
+		B5BE5D730E19041657FB736753DA3B06 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PINOperation;
+			target = 57310B016450E63387C9D64F4933E995 /* PINOperation */;
+			targetProxy = 10D4425AC63EEB6E08BA712F93C5F847 /* PBXContainerItemProxy */;
+		};
+		E665547374A3F21C340E9142095EB055 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PINCache;
+			target = A927C3CD51C30012080D6CA07959B246 /* PINCache */;
+			targetProxy = B1C45AED47945AE2AE1C1093EBAC9C00 /* PBXContainerItemProxy */;
+		};
+		F11A566A9BA424B29AD63226DF2AB824 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PINRemoteImage;
+			target = E2A8B2A28D2EAB2E4CCF3B69E6792851 /* PINRemoteImage */;
+			targetProxy = 2BC8729CFFE34712F1010C4A2EE0FDD9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		00075A702957C5BD2661E9D3D35DD6F1 /* Debug */ = {
+		06BB47F08B0CA60E579AEBD2A70E623B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3232E0BCC2912E81A654F219408F0ACE /* Pods-WeatherInformationTableApp.debug.xcconfig */;
+			baseConfigurationReference = 261F0E2402E3710749C8311B4CB15622 /* PINOperation.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -375,32 +1380,33 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_MODULE_VERIFIER = NO;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				INFOPLIST_FILE = "Target Support Files/Pods-WeatherInformationTableApp/Pods-WeatherInformationTableApp-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/PINOperation/PINOperation-prefix.pch";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Target Support Files/PINOperation/PINOperation-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-WeatherInformationTableApp/Pods-WeatherInformationTableApp.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				MODULEMAP_FILE = "Target Support Files/PINOperation/PINOperation.modulemap";
+				PRODUCT_MODULE_NAME = PINOperation;
+				PRODUCT_NAME = PINOperation;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		24CE1EA08B457C1CBBE2AC88A03C248F /* Release */ = {
+		1098776684F62118218376EAB728B75D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DB1F159EC8A07FEA6B46FD34A26FC695 /* Pods-WeatherInformationTableApp.release.xcconfig */;
+			baseConfigurationReference = 82FEB6DC54C439504DEE95AFB7CEF912 /* Pods-WeatherInformationTableApp.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -438,9 +1444,9 @@
 			};
 			name = Release;
 		};
-		40DADBB1E383D5D633E0DEFCF187423C /* Debug */ = {
+		24BE97018BC5182C2EAA731290F52618 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F375881114BC5C2DB0B60C345CC7DA29 /* Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests.debug.xcconfig */;
+			baseConfigurationReference = DD52FC36E4235AFAB62A5436778B08BC /* Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -472,10 +1478,67 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		2A8032F14798464D9D297F28923CDCE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB3CF59C0E0E89A420257F8BC5A8D29A /* Pods-WeatherInformationTableApp.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "Target Support Files/Pods-WeatherInformationTableApp/Pods-WeatherInformationTableApp-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-WeatherInformationTableApp/Pods-WeatherInformationTableApp.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		44EE4925324A0F5E64934380EABB9A1A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0DD7337550355231A5CA881AB20668C1 /* PINOperation.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/PINOperation";
+				IBSC_MODULE = PINOperation;
+				INFOPLIST_FILE = "Target Support Files/PINOperation/ResourceBundle-PINOperation-PINOperation-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				PRODUCT_NAME = PINOperation;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
 		};
 		59E8734DA70715406493CA912F854277 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -605,9 +1668,103 @@
 			};
 			name = Release;
 		};
+		5BCCDD5AEEB10E3669B246FB8572FFDD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14F34C2FF1909427B624D6E82A0B54E1 /* PINRemoteImage.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Target Support Files/PINRemoteImage/PINRemoteImage-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/PINRemoteImage/PINRemoteImage.modulemap";
+				PRODUCT_MODULE_NAME = PINRemoteImage;
+				PRODUCT_NAME = PINRemoteImage;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6507CDB38F29EF71BEED20786FB9C520 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 261F0E2402E3710749C8311B4CB15622 /* PINOperation.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/PINOperation";
+				IBSC_MODULE = PINOperation;
+				INFOPLIST_FILE = "Target Support Files/PINOperation/ResourceBundle-PINOperation-PINOperation-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				PRODUCT_NAME = PINOperation;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		75061976AC68468FEE27972AE4D29EC4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC8EACD05BDECBEDA1E94E3216240230 /* PINCache.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_PREFIX_HEADER = "Target Support Files/PINCache/PINCache-prefix.pch";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Target Support Files/PINCache/PINCache-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/PINCache/PINCache.modulemap";
+				PRODUCT_MODULE_NAME = PINCache;
+				PRODUCT_NAME = PINCache;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		95DE14DEDB54D75F617EE39C7AB361E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BD71EFCB812D088085239DCA53F033DC /* Pods-WeatherInformationTableAppTests.debug.xcconfig */;
+			baseConfigurationReference = DF7179BF5B9784B99187E33EA4E1B463 /* Pods-WeatherInformationTableAppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -644,9 +1801,105 @@
 			};
 			name = Debug;
 		};
-		BF41E9E1BA558AE00A5BD79B3C2957A6 /* Release */ = {
+		A4933BA30203B64B3ED5BCA2ADD4B786 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 28F3A3E527769219E803471010832624 /* Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests.release.xcconfig */;
+			baseConfigurationReference = 8E7704CE302908E7FA441B85EAC730C7 /* PINCache.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_PREFIX_HEADER = "Target Support Files/PINCache/PINCache-prefix.pch";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Target Support Files/PINCache/PINCache-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/PINCache/PINCache.modulemap";
+				PRODUCT_MODULE_NAME = PINCache;
+				PRODUCT_NAME = PINCache;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A4EB4A2A3EAD0455876F3500B18E8689 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 920A0B6FA25EDA86102DA6C6743DE792 /* PINRemoteImage.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Target Support Files/PINRemoteImage/PINRemoteImage-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/PINRemoteImage/PINRemoteImage.modulemap";
+				PRODUCT_MODULE_NAME = PINRemoteImage;
+				PRODUCT_NAME = PINRemoteImage;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C3D6844E14AF414FDF30C9DACEAC5DB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 920A0B6FA25EDA86102DA6C6743DE792 /* PINRemoteImage.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/PINRemoteImage";
+				IBSC_MODULE = PINRemoteImage;
+				INFOPLIST_FILE = "Target Support Files/PINRemoteImage/ResourceBundle-PINRemoteImage-PINRemoteImage-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_NAME = PINRemoteImage;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		C67232A7D33A674165B1ADC94D1FC104 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D476E42C6FAF74DB49B7A269FE9DB09 /* Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -678,15 +1931,71 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C7F71117289D664C77D32ACB0FA8CE05 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0DD7337550355231A5CA881AB20668C1 /* PINOperation.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_PREFIX_HEADER = "Target Support Files/PINOperation/PINOperation-prefix.pch";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Target Support Files/PINOperation/PINOperation-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/PINOperation/PINOperation.modulemap";
+				PRODUCT_MODULE_NAME = PINOperation;
+				PRODUCT_NAME = PINOperation;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
+		CA44F101073C7F3140B12CE1C6868736 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E7704CE302908E7FA441B85EAC730C7 /* PINCache.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/PINCache";
+				IBSC_MODULE = PINCache;
+				INFOPLIST_FILE = "Target Support Files/PINCache/ResourceBundle-PINCache-PINCache-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				PRODUCT_NAME = PINCache;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
 		CB1B926F5FD390CED09333463C6F564A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B4F0F0CE60F677B257E0577624EA9988 /* Pods-WeatherInformationTableAppTests.release.xcconfig */;
+			baseConfigurationReference = C876E515E3FA8AB298A20A2AAFCD9AB7 /* Pods-WeatherInformationTableAppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -724,14 +2033,66 @@
 			};
 			name = Release;
 		};
+		FB8485A08348C5694D274E21BAC91307 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC8EACD05BDECBEDA1E94E3216240230 /* PINCache.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/PINCache";
+				IBSC_MODULE = PINCache;
+				INFOPLIST_FILE = "Target Support Files/PINCache/ResourceBundle-PINCache-PINCache-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				PRODUCT_NAME = PINCache;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		FC4B77828E1991E916925F9F577AA1FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14F34C2FF1909427B624D6E82A0B54E1 /* PINRemoteImage.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/PINRemoteImage";
+				IBSC_MODULE = PINRemoteImage;
+				INFOPLIST_FILE = "Target Support Files/PINRemoteImage/ResourceBundle-PINRemoteImage-PINRemoteImage-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_NAME = PINRemoteImage;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4420B513AA0B1E82A2D43EBF958CB41B /* Build configuration list for PBXNativeTarget "Pods-WeatherInformationTableApp" */ = {
+		03A6F305301C98DA650E93D903AE823D /* Build configuration list for PBXNativeTarget "PINCache-PINCache" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				00075A702957C5BD2661E9D3D35DD6F1 /* Debug */,
-				24CE1EA08B457C1CBBE2AC88A03C248F /* Release */,
+				FB8485A08348C5694D274E21BAC91307 /* Debug */,
+				CA44F101073C7F3140B12CE1C6868736 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DC721C6DEEFA7C321C109F501D3F7FD /* Build configuration list for PBXNativeTarget "PINOperation-PINOperation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6507CDB38F29EF71BEED20786FB9C520 /* Debug */,
+				44EE4925324A0F5E64934380EABB9A1A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		410F4744BB1DE0B18C358F400E9F7224 /* Build configuration list for PBXNativeTarget "Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C67232A7D33A674165B1ADC94D1FC104 /* Debug */,
+				24BE97018BC5182C2EAA731290F52618 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -745,11 +2106,47 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DD5AB96BD6D4F2B6CE37366727F9FDA2 /* Build configuration list for PBXNativeTarget "Pods-WeatherInformationTableApp-WeatherInformationTableAppUITests" */ = {
+		594398784DD0CED15070564F9839F093 /* Build configuration list for PBXNativeTarget "PINRemoteImage-PINRemoteImage" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				40DADBB1E383D5D633E0DEFCF187423C /* Debug */,
-				BF41E9E1BA558AE00A5BD79B3C2957A6 /* Release */,
+				FC4B77828E1991E916925F9F577AA1FC /* Debug */,
+				C3D6844E14AF414FDF30C9DACEAC5DB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		62CA0263A5D9AF3FF8A84EE0C5E7E51F /* Build configuration list for PBXNativeTarget "PINOperation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06BB47F08B0CA60E579AEBD2A70E623B /* Debug */,
+				C7F71117289D664C77D32ACB0FA8CE05 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8D4E5C64E2E438EC8D6525157685FC49 /* Build configuration list for PBXNativeTarget "PINCache" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75061976AC68468FEE27972AE4D29EC4 /* Debug */,
+				A4933BA30203B64B3ED5BCA2ADD4B786 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9E9A28E427164F56108451C69464BF50 /* Build configuration list for PBXNativeTarget "PINRemoteImage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BCCDD5AEEB10E3669B246FB8572FFDD /* Debug */,
+				A4EB4A2A3EAD0455876F3500B18E8689 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F14BD1ECF524D1AD1A835118E2B6AF68 /* Build configuration list for PBXNativeTarget "Pods-WeatherInformationTableApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A8032F14798464D9D297F28923CDCE2 /* Debug */,
+				1098776684F62118218376EAB728B75D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
