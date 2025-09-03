@@ -16,7 +16,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // 初期表示画面設定
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
-        let rootVC = WeatherManagementViewController()
+        let rootVM = WeatherManagementViewModel()
+        let rootVC = WeatherManagementViewController(dependency: rootVM)
         window.rootViewController = rootVC
         self.window = window
         window.makeKeyAndVisible()
