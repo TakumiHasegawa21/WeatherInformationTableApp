@@ -4,6 +4,7 @@
 target 'WeatherInformationTableApp' do
 
   # Application
+  pod 'APIKit' 
   pod 'PINRemoteImage'
 
   # Comment the next line if you don't want to use dynamic frameworks
