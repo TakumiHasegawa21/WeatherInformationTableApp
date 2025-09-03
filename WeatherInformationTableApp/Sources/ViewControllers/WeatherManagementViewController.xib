@@ -12,6 +12,7 @@
             <connections>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="weatherPointTextField" destination="cIh-Mw-Ofq" id="KXh-2v-bSq"/>
+                <outlet property="weatherSearchButton" destination="6ye-Fn-Mbc" id="jiv-Oy-4lm"/>
                 <outlet property="weatherTableView" destination="e1P-qY-0i8" id="JFz-5d-BjC"/>
             </connections>
         </placeholder>
@@ -21,7 +22,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="天気を知りたい地名を入力してください" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cIh-Mw-Ofq">
-                    <rect key="frame" x="40" y="75" width="313" height="44"/>
+                    <rect key="frame" x="24" y="75" width="265" height="44"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="44" id="miG-3d-7ne"/>
                     </constraints>
@@ -39,20 +40,28 @@
                         <constraint firstAttribute="height" constant="1" id="tUc-hu-no1"/>
                     </constraints>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ye-Fn-Mbc">
+                    <rect key="frame" x="313" y="79" width="56" height="44"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="検索"/>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="cIh-Mw-Ofq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="3b8-fA-3fC"/>
+                <constraint firstItem="cIh-Mw-Ofq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="3b8-fA-3fC"/>
                 <constraint firstItem="2e3-C1-ZKK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="4SJ-Nq-3z1"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="e1P-qY-0i8" secondAttribute="trailing" id="55L-RZ-iu4"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="2e3-C1-ZKK" secondAttribute="trailing" id="GQU-KW-RRa"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="6ye-Fn-Mbc" secondAttribute="trailing" constant="24" id="KCG-YD-CaD"/>
                 <constraint firstItem="2e3-C1-ZKK" firstAttribute="top" secondItem="cIh-Mw-Ofq" secondAttribute="bottom" constant="24" id="Qwa-EU-cGw"/>
                 <constraint firstItem="e1P-qY-0i8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Sqv-8R-O1F"/>
                 <constraint firstItem="e1P-qY-0i8" firstAttribute="top" secondItem="2e3-C1-ZKK" secondAttribute="bottom" id="Y9Y-Qk-cRL"/>
+                <constraint firstItem="6ye-Fn-Mbc" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="fsr-GK-GGU"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="e1P-qY-0i8" secondAttribute="bottom" id="mqS-G2-K5f"/>
                 <constraint firstItem="cIh-Mw-Ofq" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="pbs-8p-BRz"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="cIh-Mw-Ofq" secondAttribute="trailing" constant="40" id="vw9-67-CRt"/>
+                <constraint firstItem="6ye-Fn-Mbc" firstAttribute="leading" secondItem="cIh-Mw-Ofq" secondAttribute="trailing" constant="24" id="uQN-Me-r0F"/>
+                <constraint firstItem="2e3-C1-ZKK" firstAttribute="top" secondItem="6ye-Fn-Mbc" secondAttribute="bottom" constant="20" id="zJ5-7M-dCl"/>
             </constraints>
             <point key="canvasLocation" x="-92.36641221374046" y="19.718309859154932"/>
         </view>

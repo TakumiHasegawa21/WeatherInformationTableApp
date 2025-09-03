@@ -7,6 +7,8 @@
 
 import UIKit
 import APIKit
+import RxSwift
+import RxCocoa
 
 final class WeatherManagementViewController: UIViewController {
 
@@ -15,6 +17,7 @@ final class WeatherManagementViewController: UIViewController {
 
     // MARK: - Dependency
     @IBOutlet private weak var weatherPointTextField: UITextField!
+    @IBOutlet private weak var weatherSearchButton: UIButton!
     @IBOutlet private weak var weatherTableView: UITableView! {
         didSet {
             weatherTableView.rowHeight = 190
@@ -23,6 +26,7 @@ final class WeatherManagementViewController: UIViewController {
     }
     
     private var viewModel: Dependency
+    private let disposeBag = DisposeBag()
     
     // MARK: - Initialize
     init(dependency: Dependency) {
@@ -40,13 +44,28 @@ final class WeatherManagementViewController: UIViewController {
         super.viewDidLoad()
         weatherTableView.dataSource = self
         weatherTableView.delegate = self
+        bind()
         viewModel.inputs.reload.accept(())
+    }
+}
+
+
+// MARK: - Binding
+private extension WeatherManagementViewController {
+    func bind() {
+        viewModel.outputs.weather
+            .asObservable()
+            .observe(on: MainScheduler.instance)
+            .subscribe(onNext: { [weak self] _ in
+                self?.weatherTableView.reloadData()
+            })
+            .disposed(by: disposeBag)
     }
 }
 
 extension WeatherManagementViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -54,6 +73,11 @@ extension WeatherManagementViewController: UITableViewDataSource {
             withIdentifier: String(describing: WeatherInformationTableViewCell.self),
             for: indexPath
         ) as! WeatherInformationTableViewCell
+
+        if let weatherResponse = viewModel.outputs.weather.value {
+            cell.configure(with: weatherResponse)
+        }
+        
         return cell
     }
 }
