@@ -11,13 +11,13 @@ import RxCocoa
 import APIKit
 
 protocol WeatherRepositoryProtocol {
-    func getWeatherInformation() -> Single<WeatherResponse>
+    func getWeatherInformation(for city: String) -> Single<WeatherResponse>
 }
 
 final class WeatherRepository: WeatherRepositoryProtocol {
     // MARK: - ItemRepository Protocol
-    func getWeatherInformation() -> Single<WeatherResponse> {
-        let request = NorenAPI.GetWeatherRequest(city: "Tokyo", apiKey: "a284d183b62eae0d39b4a24d5822c531")
+    func getWeatherInformation(for city: String) -> Single<WeatherResponse> {
+        let request = NorenAPI.GetWeatherRequest(city: city, apiKey: "a284d183b62eae0d39b4a24d5822c531")
         return Single<WeatherResponse>.create { observer in
             let task = Session.shared.send(request) { result in
                 switch result {

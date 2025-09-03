@@ -53,6 +53,23 @@ final class WeatherManagementViewController: UIViewController {
 // MARK: - Binding
 private extension WeatherManagementViewController {
     func bind() {
+        // 検索ボタンのタップで天気情報を取得
+        weatherSearchButton.rx.tap
+            .withLatestFrom(weatherPointTextField.rx.text.orEmpty)
+            .filter { !$0.isEmpty }
+            .bind(to: viewModel.inputs.cityInput)
+            .disposed(by: disposeBag)
+        
+        // 検索ボタンのタップでリロード実行
+        weatherSearchButton.rx.tap
+            .withLatestFrom(weatherPointTextField.rx.text.orEmpty)
+            .filter { !$0.isEmpty }
+            .subscribe(onNext: { [weak self] _ in
+                self?.viewModel.inputs.reload.accept(())
+            })
+            .disposed(by: disposeBag)
+        
+        // ViewModelのweatherデータを監視してTableViewを更新
         viewModel.outputs.weather
             .asObservable()
             .observe(on: MainScheduler.instance)

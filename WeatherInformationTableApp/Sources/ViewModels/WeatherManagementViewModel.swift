@@ -12,6 +12,7 @@ import RxSwift
 
 protocol WeatherManagementViewModelInputs: AnyObject {
     var reload: PublishRelay<Void> { get }
+    var cityInput: PublishRelay<String> { get }
 }
 
 protocol WeatherManagementViewModelOutputs: AnyObject {
@@ -31,6 +32,7 @@ final class WeatherManagementViewModel: WeatherManagementViewModelType, WeatherM
     
     // MARK: - Input Sources
     let reload = PublishRelay<Void>()
+    let cityInput = PublishRelay<String>()
     
     // MARK: - Output Sources
     let weather: Property<WeatherResponse?>
@@ -38,42 +40,32 @@ final class WeatherManagementViewModel: WeatherManagementViewModelType, WeatherM
     
     // MARK: - Properties
     private let _weather = BehaviorRelay<WeatherResponse?>(value: nil)
-    private let loadAction: Action<Void, WeatherResponse>
+    private let _city = BehaviorRelay<String>(value: "Tokyo")
+    private let loadAction: Action<String, WeatherResponse>
     private let disposeBag = DisposeBag()
     
     // MARK: - Initialize
     init(weatherRepository: WeatherRepositoryProtocol = WeatherRepository()) {
         
         // MARK: - Actions
-        self.loadAction = Action {
-            weatherRepository.getWeatherInformation().asObservable()
+        self.loadAction = Action { city in
+            weatherRepository.getWeatherInformation(for: city).asObservable()
         }
         
         // MARK: - Outputs & Actions Elements
         self.isLoading = loadAction.executing.asDriver(onErrorDriveWith: .empty())
         self.weather = Property(_weather)
         
+        cityInput
+            .bind(to: _city)
+            .disposed(by: disposeBag)
+
         reload.asObservable()
+            .withLatestFrom(_city) { _, city in city }
             .bind(to: loadAction.inputs)
             .disposed(by: disposeBag)
+            
         loadAction.elements
-            .do(onNext: { weatherResponse in
-                print("=== ViewModel経由で天気情報取得成功 ===")
-                print("都市: \(weatherResponse.name)")
-                print("天気: \(weatherResponse.weather.first?.description ?? "不明")")
-                print("天気アイコン: \(weatherResponse.weather.first?.icon ?? "不明")")
-                print("現在気温: \(weatherResponse.main.temp)°C")
-                print("最高気温: \(weatherResponse.main.tempMax)°C")
-                print("最低気温: \(weatherResponse.main.tempMin)°C")
-                print("湿度: \(weatherResponse.main.humidity)%")
-                print("風速: \(weatherResponse.wind.speed)m/s")
-                print("取得時刻: \(Date())")
-                print("================================")
-            }, onError: { error in
-                print("=== ViewModel経由で天気情報取得エラー ===")
-                print("エラー: \(error)")
-                print("================================")
-            })
             .bind(to: _weather)
             .disposed(by: disposeBag)
     }
