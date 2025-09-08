@@ -20,7 +20,7 @@ final class WeatherManagementViewController: UIViewController {
     @IBOutlet private weak var weatherSearchButton: UIButton!
     @IBOutlet private weak var weatherTableView: UITableView! {
         didSet {
-            weatherTableView.rowHeight = 190
+            weatherTableView.rowHeight = 320
             weatherTableView.registerCell(WeatherInformationTableViewCell.self)
         }
     }
@@ -101,6 +101,6 @@ extension WeatherManagementViewController: UITableViewDataSource {
 
 extension WeatherManagementViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 190
+        return 320
     }
 }
