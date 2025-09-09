@@ -36,27 +36,19 @@ extension NorenAPI {
             return JSONDataParser(readingOptions: [])
         }
         
-        // MARK: - Response Parsing
-        func response(from object: Any, urlResponse: HTTPURLResponse) throws -> WeatherResponse {
-            // JSONDataParserにより`object`はJSON(Any)になるため、Dataへ戻してからCodableデコード
-            let jsonObject = object
-            guard JSONSerialization.isValidJSONObject(jsonObject) else {
-                // ルートが辞書/配列以外のケースも一応考慮し、辞書として受け直す
-                if let dict = jsonObject as? [String: Any] {
-                    let data = try JSONSerialization.data(withJSONObject: dict, options: [])
-                    let decoder = JSONDecoder()
-                    return try decoder.decode(WeatherResponse.self, from: data)
-                }
-                if let array = jsonObject as? [Any] {
-                    let data = try JSONSerialization.data(withJSONObject: array, options: [])
-                    let decoder = JSONDecoder()
-                    return try decoder.decode(WeatherResponse.self, from: data)
-                }
+        func response(from object: Any, urlResponse: HTTPURLResponse) throws -> Response {
+            
+            guard let jsonObject = object as? [String: Any] else {
+                print("Unexpected object type:", type(of: object))
                 throw ResponseError.unexpectedObject(object)
             }
-            let data = try JSONSerialization.data(withJSONObject: jsonObject, options: [])
-            let decoder = JSONDecoder()
-            return try decoder.decode(WeatherResponse.self, from: data)
+            do {
+                let data = try JSONSerialization.data(withJSONObject: jsonObject)
+                let decoder = JSONDecoder()
+                return try decoder.decode(Response.self, from: data)
+            } catch {
+                throw ResponseError.unexpectedObject(object)
+            }
         }
     }
 }
