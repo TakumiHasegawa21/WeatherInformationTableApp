@@ -15,7 +15,7 @@ final class WeatherManagementViewController: UIViewController {
     // MARK: - Dependency
     typealias Dependency = WeatherManagementViewModelType
 
-    // MARK: - Dependency
+    // MARK: - Properties
     @IBOutlet private weak var weatherPointTextField: UITextField!
     @IBOutlet private weak var weatherSearchButton: UIButton!
     @IBOutlet private weak var weatherTableView: UITableView! {
@@ -25,13 +25,13 @@ final class WeatherManagementViewController: UIViewController {
         }
     }
     
-    private var viewModel: Dependency
+    private lazy var viewModel: Dependency = { fatalError("Use configure(with:) method at initialize controller") }()
     private let disposeBag = DisposeBag()
     
     // MARK: - Initialize
     init(dependency: Dependency) {
-        self.viewModel = dependency
         super.init(nibName: Self.className, bundle: Self.bundle)
+        self.viewModel = dependency
     }
     
     @available(*, unavailable)
@@ -43,8 +43,7 @@ final class WeatherManagementViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         weatherTableView.dataSource = self
-        weatherTableView.delegate = self
-        bind()
+        bind(to: viewModel)
         viewModel.inputs.reload.accept(())
     }
 }
@@ -52,28 +51,27 @@ final class WeatherManagementViewController: UIViewController {
 
 // MARK: - Binding
 private extension WeatherManagementViewController {
-    func bind() {
+    func bind(to viewModel: WeatherManagementViewModelType) {
         // 検索ボタンのタップで天気情報を取得
-        weatherSearchButton.rx.tap
-            .withLatestFrom(weatherPointTextField.rx.text.orEmpty)
+        weatherSearchButton.rx.tap.asSignal()
+            .withLatestFrom(weatherPointTextField.rx.text.orEmpty.asDriver(onErrorJustReturn: ""))
             .filter { !$0.isEmpty }
-            .bind(to: viewModel.inputs.cityInput)
+            .emit(to: viewModel.inputs.cityKeyword)
             .disposed(by: disposeBag)
         
-        // 検索ボタンのタップでリロード実行
-        weatherSearchButton.rx.tap
-            .withLatestFrom(weatherPointTextField.rx.text.orEmpty)
+        // 検索ボタンをタップすると合わせてリロード処理も実行
+        weatherSearchButton.rx.tap.asSignal()
+            .withLatestFrom(weatherPointTextField.rx.text.orEmpty.asDriver(onErrorJustReturn: ""))
             .filter { !$0.isEmpty }
-            .subscribe(onNext: { [weak self] _ in
+            .emit(onNext: { [weak self] _ in
                 self?.viewModel.inputs.reload.accept(())
             })
             .disposed(by: disposeBag)
         
         // ViewModelのweatherデータを監視してTableViewを更新
         viewModel.outputs.weather
-            .asObservable()
-            .observe(on: MainScheduler.instance)
-            .subscribe(onNext: { [weak self] _ in
+            .asDriver()
+            .drive(onNext: { [weak self] _ in
                 self?.weatherTableView.reloadData()
             })
             .disposed(by: disposeBag)
@@ -94,13 +92,6 @@ extension WeatherManagementViewController: UITableViewDataSource {
         if let weatherResponse = viewModel.outputs.weather.value {
             cell.configure(with: weatherResponse)
         }
-        
         return cell
-    }
-}
-
-extension WeatherManagementViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 320
     }
 }

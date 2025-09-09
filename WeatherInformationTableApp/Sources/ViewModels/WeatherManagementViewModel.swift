@@ -12,7 +12,7 @@ import RxSwift
 
 protocol WeatherManagementViewModelInputs: AnyObject {
     var reload: PublishRelay<Void> { get }
-    var cityInput: PublishRelay<String> { get }
+    var cityKeyword: PublishRelay<String> { get }
 }
 
 protocol WeatherManagementViewModelOutputs: AnyObject {
@@ -29,34 +29,35 @@ final class WeatherManagementViewModel: WeatherManagementViewModelType, WeatherM
     // MARK: - Properties
     var inputs: WeatherManagementViewModelInputs { return self }
     var outputs: WeatherManagementViewModelOutputs { return self }
-    
+
     // MARK: - Input Sources
     let reload = PublishRelay<Void>()
-    let cityInput = PublishRelay<String>()
+    let cityKeyword = PublishRelay<String>()
     
     // MARK: - Output Sources
     let weather: Property<WeatherResponse?>
     let isLoading: Driver<Bool>
-    
+
     // MARK: - Properties
+    private let loadAction: Action<String, WeatherResponse>
     private let _weather = BehaviorRelay<WeatherResponse?>(value: nil)
     private let _city = BehaviorRelay<String>(value: "Tokyo")
-    private let loadAction: Action<String, WeatherResponse>
     private let disposeBag = DisposeBag()
-    
+
     // MARK: - Initialize
     init(weatherRepository: WeatherRepositoryProtocol = WeatherRepository()) {
-        
+
         // MARK: - Actions
         self.loadAction = Action { city in
             weatherRepository.getWeatherInformation(for: city).asObservable()
         }
-        
+    
         // MARK: - Outputs & Actions Elements
         self.isLoading = loadAction.executing.asDriver(onErrorDriveWith: .empty())
         self.weather = Property(_weather)
-        
-        cityInput
+
+        // MARK: - Inputs
+        cityKeyword
             .bind(to: _city)
             .disposed(by: disposeBag)
 
