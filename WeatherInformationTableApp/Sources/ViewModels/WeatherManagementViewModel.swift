@@ -17,6 +17,7 @@ protocol WeatherManagementViewModelInputs: AnyObject {
 
 protocol WeatherManagementViewModelOutputs: AnyObject {
     var weather: Driver<[WeatherResponse]> { get }
+    var weatherIconURL: Driver<String?> { get }
     var isLoading: Driver<Bool> { get }
 }
 
@@ -36,6 +37,7 @@ final class WeatherManagementViewModel: WeatherManagementViewModelType, WeatherM
     
     // MARK: - Output Sources
     let weather: Driver<[WeatherResponse]>
+    let weatherIconURL: Driver<String?>
     let isLoading: Driver<Bool>
 
     // MARK: - Properties
@@ -54,9 +56,16 @@ final class WeatherManagementViewModel: WeatherManagementViewModelType, WeatherM
     
         // MARK: - Outputs & Actions Elements
         self.isLoading = loadAction.executing.asDriver(onErrorDriveWith: .empty())
-        self.weather = _weather.asDriver()
+        self.weather = _weather
+            .asDriver()
             .map { weatherResponse in
                 weatherResponse.map { [$0] } ?? []
+            }
+        self.weatherIconURL = _weather
+            .asDriver()
+            .map { weatherResponse in
+                guard let iconCode = weatherResponse?.weather.first?.icon else { return nil }
+                return "https://openweathermap.org/img/wn/\(iconCode)@2x.png"
             }
 
         // MARK: - Inputs

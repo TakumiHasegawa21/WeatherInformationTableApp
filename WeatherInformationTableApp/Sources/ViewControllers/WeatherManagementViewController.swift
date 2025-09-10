@@ -67,13 +67,20 @@ private extension WeatherManagementViewController {
             .disposed(by: disposeBag)
         
         // ViewModelのweatherデータを監視してTableViewを更新
-        viewModel.outputs.weather
-            .drive(weatherTableView.rx.items) { tableView, row, element in
-                let cell = tableView.dequeueReusableCell(WeatherInformationTableViewCell.self, for: [0, row])
-                cell.configure(with: element)
-                return cell
-            }
-            .disposed(by: disposeBag)
+        Driver.combineLatest(
+            viewModel.outputs.weather,
+            viewModel.outputs.weatherIconURL
+        )
+        .map { weatherData, iconURL in
+            weatherData.map { ($0, iconURL) }
+        }
+        .drive(weatherTableView.rx.items) { tableView, row, data in
+            let (weatherResponse, iconURL) = data
+            let cell = tableView.dequeueReusableCell(WeatherInformationTableViewCell.self, for: [0, row])
+            cell.configure(with: weatherResponse, iconURL: iconURL)
+            return cell
+        }
+        .disposed(by: disposeBag)
     }
 }
 

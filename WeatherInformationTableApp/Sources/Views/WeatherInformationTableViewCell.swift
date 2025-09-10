@@ -27,15 +27,13 @@ final class WeatherInformationTableViewCell: UITableViewCell {
     }
     
     // MARK: - Configuration
-    func configure(with weatherResponse: WeatherResponse) {
+    func configure(with weatherResponse: WeatherResponse, iconURL: String?) {
         weatherPointLabel.text = weatherResponse.name
         maxTemperatureLabel.text = "最高気温: \(Int(weatherResponse.main.tempMax))°C"
         minTemperatureLabel.text = "最低気温: \(Int(weatherResponse.main.tempMin))°C"
         humidityLabel.text = "湿度: \(weatherResponse.main.humidity)%"
         windSpeedLabel.text = "風速: \(weatherResponse.wind.speed)m/s"
-        if let iconCode = weatherResponse.weather.first?.icon {
-            let iconURL = "https://openweathermap.org/img/wn/\(iconCode)@2x.png"
-            weatherImage.pin_setImage(from: URL(string: iconURL))
-        }
+        
+        weatherImage.pin_setImage(from: URL(string: iconURL ?? ""))
     }
 }
