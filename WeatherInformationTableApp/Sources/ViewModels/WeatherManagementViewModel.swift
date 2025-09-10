@@ -65,7 +65,7 @@ final class WeatherManagementViewModel: WeatherManagementViewModelType, WeatherM
             .asDriver()
             .map { weatherResponse in
                 guard let iconCode = weatherResponse?.weather.first?.icon else { return nil }
-                return "https://openweathermap.org/img/wn/\(iconCode)@2x.png"
+                return OpenWeatherConstants.iconURL(for: iconCode)
             }
 
         // MARK: - Inputs
