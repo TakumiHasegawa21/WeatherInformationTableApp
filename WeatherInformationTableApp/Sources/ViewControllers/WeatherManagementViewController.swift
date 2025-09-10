@@ -42,7 +42,6 @@ final class WeatherManagementViewController: UIViewController {
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        weatherTableView.dataSource = self
         bind(to: viewModel)
         viewModel.inputs.reload.accept(())
     }
@@ -70,28 +69,12 @@ private extension WeatherManagementViewController {
         
         // ViewModelのweatherデータを監視してTableViewを更新
         viewModel.outputs.weather
-            .asDriver()
-            .drive(onNext: { [weak self] _ in
-                self?.weatherTableView.reloadData()
-            })
+            .drive(weatherTableView.rx.items) { tableView, row, element in
+                let cell = tableView.dequeueReusableCell(WeatherInformationTableViewCell.self, for: [0, row])
+                cell.configure(with: element)
+                return cell
+            }
             .disposed(by: disposeBag)
     }
 }
 
-extension WeatherManagementViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(
-            withIdentifier: String(describing: WeatherInformationTableViewCell.self),
-            for: indexPath
-        ) as! WeatherInformationTableViewCell
-
-        if let weatherResponse = viewModel.outputs.weather.value {
-            cell.configure(with: weatherResponse)
-        }
-        return cell
-    }
-}

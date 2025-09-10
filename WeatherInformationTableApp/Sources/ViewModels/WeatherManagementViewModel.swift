@@ -16,7 +16,7 @@ protocol WeatherManagementViewModelInputs: AnyObject {
 }
 
 protocol WeatherManagementViewModelOutputs: AnyObject {
-    var weather: Property<WeatherResponse?> { get }
+    var weather: Driver<[WeatherResponse]> { get }
     var isLoading: Driver<Bool> { get }
 }
 
@@ -35,7 +35,7 @@ final class WeatherManagementViewModel: WeatherManagementViewModelType, WeatherM
     let cityKeyword = PublishRelay<String>()
     
     // MARK: - Output Sources
-    let weather: Property<WeatherResponse?>
+    let weather: Driver<[WeatherResponse]>
     let isLoading: Driver<Bool>
 
     // MARK: - Properties
@@ -54,7 +54,10 @@ final class WeatherManagementViewModel: WeatherManagementViewModelType, WeatherM
     
         // MARK: - Outputs & Actions Elements
         self.isLoading = loadAction.executing.asDriver(onErrorDriveWith: .empty())
-        self.weather = Property(_weather)
+        self.weather = _weather.asDriver()
+            .map { weatherResponse in
+                weatherResponse.map { [$0] } ?? []
+            }
 
         // MARK: - Inputs
         cityKeyword
