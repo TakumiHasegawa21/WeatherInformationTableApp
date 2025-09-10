@@ -23,7 +23,6 @@ final class WeatherInformationTableViewCell: UITableViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         weatherImage.pin_clearImages()
-        weatherImage.pin_cancelImageDownload()
     }
     
     // MARK: - Configuration
@@ -33,7 +32,6 @@ final class WeatherInformationTableViewCell: UITableViewCell {
         minTemperatureLabel.text = "最低気温: \(Int(weatherResponse.main.tempMin))°C"
         humidityLabel.text = "湿度: \(weatherResponse.main.humidity)%"
         windSpeedLabel.text = "風速: \(weatherResponse.wind.speed)m/s"
-        
-        weatherImage.pin_setImage(from: URL(string: iconURL ?? ""))
+        weatherImage.pin_setImage(from: URL(string: iconURL ?? ""), placeholderImage: UIImage(named: "placeholder"))
     }
 }
