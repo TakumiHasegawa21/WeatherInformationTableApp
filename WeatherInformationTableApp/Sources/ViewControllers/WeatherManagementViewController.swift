@@ -21,10 +21,16 @@ final class WeatherManagementViewController: UIViewController {
         didSet {
             weatherTableView.rowHeight = 320
             weatherTableView.registerCell(WeatherInformationTableViewCell.self)
+            weatherTableView.refreshControl = refreshControl
         }
     }
     
     private lazy var viewModel: Dependency = { fatalError("Use configure(with:) method at initialize controller") }()
+    private lazy var refreshControl: UIRefreshControl = {
+        let view = UIRefreshControl()
+        view.tintColor = .gray
+        return view
+    }()
     private let disposeBag = DisposeBag()
     
     // MARK: - Initialize
@@ -81,6 +87,17 @@ private extension WeatherManagementViewController {
             return cell
         }
         .disposed(by: disposeBag)
+
+        // isLoading実行時はRefreshControlを表示 (読み込みが一瞬すぎてわからない)
+        viewModel.outputs.isLoading
+            .drive(refreshControl.rx.isRefreshing)
+            .disposed(by: disposeBag)
+        
+        // PullToRefreshでリロード処理実行
+        refreshControl.rx.controlEvent(.valueChanged)
+            .asSignal()
+            .emit(to: viewModel.inputs.reload)
+            .disposed(by: disposeBag)
     }
 }
 
