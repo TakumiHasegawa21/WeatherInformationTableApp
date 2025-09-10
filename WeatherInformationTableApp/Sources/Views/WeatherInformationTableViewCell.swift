@@ -25,10 +25,6 @@ final class WeatherInformationTableViewCell: UITableViewCell {
         weatherImage.pin_clearImages()
         weatherImage.pin_cancelImageDownload()
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
     
     // MARK: - Configuration
     func configure(with weatherResponse: WeatherResponse) {
