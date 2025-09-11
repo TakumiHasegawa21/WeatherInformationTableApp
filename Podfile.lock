@@ -24,6 +24,7 @@ PODS:
   - RxRelay (6.9.0):
     - RxSwift (= 6.9.0)
   - RxSwift (6.9.0)
+  - SwiftyJSON (5.0.2)
   - Willow (6.1.0)
 
 DEPENDENCIES:
@@ -32,6 +33,7 @@ DEPENDENCIES:
   - PINRemoteImage
   - RxCocoa
   - RxSwift
+  - SwiftyJSON
   - Willow
 
 SPEC REPOS:
@@ -44,6 +46,7 @@ SPEC REPOS:
     - RxCocoa
     - RxRelay
     - RxSwift
+    - SwiftyJSON
     - Willow
 
 SPEC CHECKSUMS:
@@ -55,8 +58,9 @@ SPEC CHECKSUMS:
   RxCocoa: ac16414696ae706516be3e1ab00fcce5bdc9be8a
   RxRelay: 6b0c930e5cef57d5fe2032571e5e65b78e3cbdb1
   RxSwift: 31649ace6aceeb422e16ff71c60804f9c3281ed9
+  SwiftyJSON: f5b1bf1cd8dd53cd25887ac0eabcfd92301c6a5a
   Willow: 4901aee8df57f7ecddb5b60a144f7cacb11f2043
 
-PODFILE CHECKSUM: 13dcbc90ea06f99460fdf4ed259022e75ba1c261
+PODFILE CHECKSUM: 1962b77471a2167661db3e24e071c9590a18a4a6
 
 COCOAPODS: 1.16.2

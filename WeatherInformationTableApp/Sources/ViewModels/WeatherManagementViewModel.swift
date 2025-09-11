@@ -19,6 +19,7 @@ protocol WeatherManagementViewModelOutputs: AnyObject {
     var weather: Driver<[WeatherResponse]> { get }
     var weatherIconURL: Driver<String?> { get }
     var isLoading: Driver<Bool> { get }
+    var error: Driver<APIError?> { get }
 }
 
 protocol WeatherManagementViewModelType: AnyObject {
@@ -39,11 +40,13 @@ final class WeatherManagementViewModel: WeatherManagementViewModelType, WeatherM
     let weather: Driver<[WeatherResponse]>
     let weatherIconURL: Driver<String?>
     let isLoading: Driver<Bool>
+    let error: Driver<APIError?>
 
     // MARK: - Properties
     private let loadAction: Action<String, WeatherResponse>
     private let _weather = BehaviorRelay<WeatherResponse?>(value: nil)
     private let _city = BehaviorRelay<String>(value: "Tokyo")
+    private let _error = BehaviorRelay<String?>(value: nil)
     private let disposeBag = DisposeBag()
 
     // MARK: - Initialize
@@ -68,6 +71,14 @@ final class WeatherManagementViewModel: WeatherManagementViewModelType, WeatherM
                 return OpenWeatherConstants.iconURL(for: iconCode)
             }
 
+        let error = loadAction.underlyingError
+            .map { APIError(error: $0) }
+            .map { Optional($0) }
+            .asDriver(onErrorDriveWith: .empty())
+        self.error = Driver.merge(error,
+                                  isLoading.filter { $0 }.map { _ in nil })
+        .startWith(nil)
+
         // MARK: - Inputs
         cityKeyword
             .bind(to: _city)
@@ -77,7 +88,7 @@ final class WeatherManagementViewModel: WeatherManagementViewModelType, WeatherM
             .withLatestFrom(_city) { _, city in city }
             .bind(to: loadAction.inputs)
             .disposed(by: disposeBag)
-            
+
         loadAction.elements
             .bind(to: _weather)
             .disposed(by: disposeBag)

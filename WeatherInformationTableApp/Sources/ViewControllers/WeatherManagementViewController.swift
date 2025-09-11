@@ -87,7 +87,7 @@ private extension WeatherManagementViewController {
             return cell
         }
         .disposed(by: disposeBag)
-
+        
         // isLoading実行時はRefreshControlを表示 (読み込みが一瞬すぎてわからない)
         viewModel.outputs.isLoading
             .drive(refreshControl.rx.isRefreshing)
@@ -98,6 +98,15 @@ private extension WeatherManagementViewController {
             .asSignal()
             .emit(to: viewModel.inputs.reload)
             .disposed(by: disposeBag)
+        
+        // エラー表示処理
+        viewModel.outputs.error
+            .filter { $0 != nil }
+            .drive(onNext: { [weak self] _ in
+                let alert = UIAlertController(title: "エラーが発生しました", message: nil, preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default))
+                self?.present(alert, animated: true)
+            })
+            .disposed(by: disposeBag)
     }
 }
-

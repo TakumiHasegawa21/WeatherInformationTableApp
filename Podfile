@@ -9,6 +9,7 @@ target 'WeatherInformationTableApp' do
   pod 'PINRemoteImage'
   pod 'RxCocoa' 
   pod 'RxSwift'
+  pod 'SwiftyJSON'
   pod 'Willow'
 
   # Comment the next line if you don't want to use dynamic frameworks
