@@ -60,7 +60,9 @@ private extension WeatherManagementViewController {
         weatherSearchButton.rx.tap.asSignal()
             .withLatestFrom(weatherPointTextField.rx.text.orEmpty.asDriver(onErrorJustReturn: ""))
             .filter { !$0.isEmpty }
-            .emit(to: viewModel.inputs.cityKeyword)
+            .emit(onNext: { [weak self] inputText in
+                self?.viewModel.inputs.cityKeyword.accept(inputText)
+            })
             .disposed(by: disposeBag)
         
         // 検索ボタンをタップすると合わせてリロード処理も実行

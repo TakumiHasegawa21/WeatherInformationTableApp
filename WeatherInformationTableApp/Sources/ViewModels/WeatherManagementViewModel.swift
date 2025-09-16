@@ -50,7 +50,7 @@ final class WeatherManagementViewModel: WeatherManagementViewModelType, WeatherM
     private let disposeBag = DisposeBag()
 
     // MARK: - Initialize
-    init(weatherRepository: WeatherRepositoryProtocol = WeatherRepository()) {
+    init(weatherRepository: WeatherRepositoryProtocol = WeatherRepository(), geocodingRepository: GeocodingRepositoryProtocol = GeocodingRepository()) {
 
         // MARK: - Actions
         self.loadAction = Action { city in
@@ -86,6 +86,19 @@ final class WeatherManagementViewModel: WeatherManagementViewModelType, WeatherM
 
         reload.asObservable()
             .withLatestFrom(_city) { _, city in city }
+            .flatMap { city in
+                // Geocoding APIで地名を検索（日本語地名も対応）
+                return geocodingRepository.searchCity(city)
+                    .map { responses in
+                        guard let firstResponse = responses.first else {
+                            return city
+                        }
+                        return firstResponse.name
+                    }
+                    .catch { _ in
+                        return Single.just(city)
+                    }
+            }
             .bind(to: loadAction.inputs)
             .disposed(by: disposeBag)
 
