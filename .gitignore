@@ -30,3 +30,5 @@ fastlane/test_output
 
 # API Keys and Secrets
 Configurations/Openweather_Secrets.xcconfig
+Configurations/Config-Debug.xcconfig
+Configurations/Config-Release.xcconfig
