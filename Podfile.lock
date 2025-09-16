@@ -1,3 +1,66 @@
-PODFILE CHECKSUM: d090a8799fb43b02671bca54145df1da33bc356d
+PODS:
+  - Action (5.0.0):
+    - RxCocoa (~> 6.0)
+    - RxSwift (~> 6.0)
+  - APIKit (5.4.0)
+  - PINCache (3.0.4):
+    - PINCache/Arc-exception-safe (= 3.0.4)
+    - PINCache/Core (= 3.0.4)
+  - PINCache/Arc-exception-safe (3.0.4):
+    - PINCache/Core
+  - PINCache/Core (3.0.4):
+    - PINOperation (~> 1.2.3)
+  - PINOperation (1.2.3)
+  - PINRemoteImage (3.0.4):
+    - PINRemoteImage/PINCache (= 3.0.4)
+  - PINRemoteImage/Core (3.0.4):
+    - PINOperation
+  - PINRemoteImage/PINCache (3.0.4):
+    - PINCache (~> 3.0.4)
+    - PINRemoteImage/Core
+  - RxCocoa (6.9.0):
+    - RxRelay (= 6.9.0)
+    - RxSwift (= 6.9.0)
+  - RxRelay (6.9.0):
+    - RxSwift (= 6.9.0)
+  - RxSwift (6.9.0)
+  - SwiftyJSON (5.0.2)
+  - Willow (6.1.0)
+
+DEPENDENCIES:
+  - Action
+  - APIKit
+  - PINRemoteImage
+  - RxCocoa
+  - RxSwift
+  - SwiftyJSON
+  - Willow
+
+SPEC REPOS:
+  trunk:
+    - Action
+    - APIKit
+    - PINCache
+    - PINOperation
+    - PINRemoteImage
+    - RxCocoa
+    - RxRelay
+    - RxSwift
+    - SwiftyJSON
+    - Willow
+
+SPEC CHECKSUMS:
+  Action: 47f1825511907b4fcd79dd7a7db9526c20f78018
+  APIKit: 0680e86d2e8abd5bc42e64963f5f89d209eb9271
+  PINCache: d9a87a0ff397acffe9e2f0db972ac14680441158
+  PINOperation: fb563bcc9c32c26d6c78aaff967d405aa2ee74a7
+  PINRemoteImage: 6256a644f4996991f124811763c7286b2a63ff94
+  RxCocoa: ac16414696ae706516be3e1ab00fcce5bdc9be8a
+  RxRelay: 6b0c930e5cef57d5fe2032571e5e65b78e3cbdb1
+  RxSwift: 31649ace6aceeb422e16ff71c60804f9c3281ed9
+  SwiftyJSON: f5b1bf1cd8dd53cd25887ac0eabcfd92301c6a5a
+  Willow: 4901aee8df57f7ecddb5b60a144f7cacb11f2043
+
+PODFILE CHECKSUM: 1962b77471a2167661db3e24e071c9590a18a4a6
 
 COCOAPODS: 1.16.2

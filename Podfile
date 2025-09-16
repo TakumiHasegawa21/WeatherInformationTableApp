@@ -2,6 +2,16 @@
 # platform :ios, '9.0'
 
 target 'WeatherInformationTableApp' do
+
+  # Application
+  pod 'Action' 
+  pod 'APIKit' 
+  pod 'PINRemoteImage'
+  pod 'RxCocoa' 
+  pod 'RxSwift'
+  pod 'SwiftyJSON'
+  pod 'Willow'
+
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
