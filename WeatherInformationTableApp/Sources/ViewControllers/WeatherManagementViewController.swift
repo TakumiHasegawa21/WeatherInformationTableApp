@@ -24,7 +24,7 @@ final class WeatherManagementViewController: UIViewController {
             weatherTableView.refreshControl = refreshControl
         }
     }
-    
+
     private lazy var viewModel: Dependency = { fatalError("Use configure(with:) method at initialize controller") }()
     private lazy var refreshControl: UIRefreshControl = {
         let view = UIRefreshControl()
@@ -32,13 +32,13 @@ final class WeatherManagementViewController: UIViewController {
         return view
     }()
     private let disposeBag = DisposeBag()
-    
+
     // MARK: - Initialize
     init(dependency: Dependency) {
         super.init(nibName: Self.className, bundle: Self.bundle)
         self.viewModel = dependency
     }
-    
+
     @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -52,7 +52,6 @@ final class WeatherManagementViewController: UIViewController {
     }
 }
 
-
 // MARK: - Binding
 private extension WeatherManagementViewController {
     func bind(to viewModel: WeatherManagementViewModelType) {
@@ -64,7 +63,7 @@ private extension WeatherManagementViewController {
                 self?.viewModel.inputs.cityKeyword.accept(inputText)
             })
             .disposed(by: disposeBag)
-        
+    
         // 検索ボタンをタップすると合わせてリロード処理も実行
         weatherSearchButton.rx.tap.asSignal()
             .withLatestFrom(weatherPointTextField.rx.text.orEmpty.asDriver(onErrorJustReturn: ""))
@@ -73,7 +72,7 @@ private extension WeatherManagementViewController {
                 self?.viewModel.inputs.reload.accept(())
             })
             .disposed(by: disposeBag)
-        
+
         // ViewModelのweatherデータを監視してTableViewを更新
         Driver.combineLatest(
             viewModel.outputs.weather,
@@ -89,18 +88,18 @@ private extension WeatherManagementViewController {
             return cell
         }
         .disposed(by: disposeBag)
-        
+
         // isLoading実行時はRefreshControlを表示 (読み込みが一瞬すぎてわからない)
         viewModel.outputs.isLoading
             .drive(refreshControl.rx.isRefreshing)
             .disposed(by: disposeBag)
-        
+
         // PullToRefreshでリロード処理実行
         refreshControl.rx.controlEvent(.valueChanged)
             .asSignal()
             .emit(to: viewModel.inputs.reload)
             .disposed(by: disposeBag)
-        
+
         // エラー表示処理
         viewModel.outputs.error
             .filter { $0 != nil }

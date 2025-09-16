@@ -9,7 +9,7 @@ import UIKit
 import PINRemoteImage
 
 final class WeatherInformationTableViewCell: UITableViewCell {
-    
+
     // MARK: - Properties
     @IBOutlet private weak var weatherPointLabel: UILabel!
     @IBOutlet private weak var maxTemperatureLabel: UILabel!
@@ -23,7 +23,7 @@ final class WeatherInformationTableViewCell: UITableViewCell {
         super.prepareForReuse()
         weatherImage.pin_clearImages()
     }
-    
+
     // MARK: - Configuration
     func configure(with weatherResponse: WeatherResponse, iconURL: String?) {
         weatherPointLabel.text = weatherResponse.name

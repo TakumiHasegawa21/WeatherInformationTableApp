@@ -30,11 +30,11 @@ extension NorenAPI {
                 "appid": apiKey
             ]
         }
-        
+
         var dataParser: DataParser {
             return JSONDataParser(readingOptions: [])
         }
-        
+
         func response(from object: Any, urlResponse: HTTPURLResponse) throws -> Response {
             guard let jsonObject = object as? [Any] else {
                 print("Unexpected object type:", type(of: object))

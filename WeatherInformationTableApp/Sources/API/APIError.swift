@@ -10,7 +10,7 @@ import APIKit
 import SwiftyJSON
 
 struct APIError: Error {
-    
+
     // MARK: - Properties
     let domain: String
     let statusCode: StatusCode
@@ -19,7 +19,7 @@ struct APIError: Error {
         guard let object = responseObject else { return nil }
         return JSON(object)
     }
-    
+
     // MARK: - NSError
     var _domain: String {
         return domain
@@ -27,7 +27,7 @@ struct APIError: Error {
     var _code: Int {
         return statusCode.rawValue
     }
-    
+
     // MARK: - Initialize
     init(error: Error) {
         if let error = error as? APIError {
@@ -81,11 +81,10 @@ struct APIError: Error {
             self.responseObject = nil
         }
     }
-    
+
     init(domain: String, statusCode: StatusCode, responseObject: Any?) {
         self.domain = domain
         self.statusCode = statusCode
         self.responseObject = responseObject
     }
-    
 }

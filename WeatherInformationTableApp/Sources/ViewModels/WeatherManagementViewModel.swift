@@ -35,7 +35,7 @@ final class WeatherManagementViewModel: WeatherManagementViewModelType, WeatherM
     // MARK: - Input Sources
     let reload = PublishRelay<Void>()
     let cityKeyword = PublishRelay<String>()
-    
+
     // MARK: - Output Sources
     let weather: Driver<[WeatherResponse]>
     let weatherIconURL: Driver<String?>
@@ -56,7 +56,7 @@ final class WeatherManagementViewModel: WeatherManagementViewModelType, WeatherM
         self.loadAction = Action { city in
             weatherRepository.getWeatherInformation(for: city).asObservable()
         }
-    
+
         // MARK: - Outputs & Actions Elements
         self.isLoading = loadAction.executing.asDriver(onErrorDriveWith: .empty())
         self.weather = _weather

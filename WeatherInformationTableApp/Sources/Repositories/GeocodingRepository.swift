@@ -15,7 +15,7 @@ protocol GeocodingRepositoryProtocol {
 }
 
 final class GeocodingRepository: GeocodingRepositoryProtocol {
-    
+
     // MARK: - GeocodingRepositoryProtocol
     func searchCity(_ query: String) -> Single<[GeocodingResponse]> {
         let apiKey = Bundle.main.object(forInfoDictionaryKey: "OpenWeatherAPIKey") as? String ?? ""

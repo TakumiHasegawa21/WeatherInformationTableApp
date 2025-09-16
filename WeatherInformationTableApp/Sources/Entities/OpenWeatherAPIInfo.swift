@@ -12,18 +12,18 @@ struct WeatherResponse: Codable {
     let main: Main
     let wind: Wind
     let name: String
-    
+
     struct Weather: Codable {
         let description: String
         let icon: String
     }
-    
+
     struct Main: Codable {
         let temp: Double
         let tempMin: Double
         let tempMax: Double
         let humidity: Int
-        
+
         enum CodingKeys: String, CodingKey {
             case temp
             case tempMin = "temp_min"
@@ -31,7 +31,7 @@ struct WeatherResponse: Codable {
             case humidity
         }
     }
-    
+
     struct Wind: Codable {
         let speed: Double
     }
