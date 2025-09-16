@@ -17,7 +17,8 @@ protocol WeatherRepositoryProtocol {
 final class WeatherRepository: WeatherRepositoryProtocol {
     // MARK: - ItemRepository Protocol
     func getWeatherInformation(for city: String) -> Single<WeatherResponse> {
-        let request = NorenAPI.GetWeatherRequest(city: city, apiKey: "a284d183b62eae0d39b4a24d5822c531")
+        let apiKey = Bundle.main.object(forInfoDictionaryKey: "OpenWeatherAPIKey") as? String ?? ""
+        let request = NorenAPI.GetWeatherRequest(city: city, apiKey: apiKey)
         return Single<WeatherResponse>.create { observer in
             let task = Session.shared.send(request) { result in
                 switch result {
