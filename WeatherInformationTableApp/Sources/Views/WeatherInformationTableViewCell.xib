@@ -23,26 +23,6 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DqP-Vx-FH5">
-                        <rect key="frame" x="172" y="24" width="124" height="28.333333333333329"/>
-                        <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="plain">
-                            <attributedString key="attributedTitle">
-                                <fragment content="GoogleMap">
-                                    <attributes>
-                                        <font key="NSFont" metaFont="cellTitle"/>
-                                        <font key="NSOriginalFont" size="12" name="Helvetica"/>
-                                    </attributes>
-                                </fragment>
-                                <fragment content="に移動">
-                                    <attributes>
-                                        <font key="NSFont" metaFont="cellTitle"/>
-                                        <font key="NSOriginalFont" metaFont="cellTitle"/>
-                                    </attributes>
-                                </fragment>
-                            </attributedString>
-                        </buttonConfiguration>
-                    </button>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e6N-mw-S35">
                         <rect key="frame" x="24" y="59.333333333333336" width="272" height="1"/>
                         <color key="backgroundColor" systemColor="systemGrayColor"/>
@@ -90,22 +70,19 @@
                     <constraint firstItem="JCv-bV-ULs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="32" id="Fb6-lL-PfI"/>
                     <constraint firstItem="12H-tv-ywa" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="24" id="Glz-rr-c0e"/>
                     <constraint firstAttribute="bottom" secondItem="yMB-nC-nze" secondAttribute="bottom" constant="28" id="NTI-Am-F8r"/>
+                    <constraint firstItem="yMB-nC-nze" firstAttribute="top" secondItem="e6N-mw-S35" secondAttribute="bottom" constant="142" id="Pcb-uc-jIw"/>
                     <constraint firstItem="JCv-bV-ULs" firstAttribute="top" secondItem="dlN-Hp-brb" secondAttribute="bottom" constant="20" id="Rmp-Fc-V5A"/>
                     <constraint firstItem="e6N-mw-S35" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="WNW-hj-YpW"/>
                     <constraint firstItem="UhD-lR-xhJ" firstAttribute="top" secondItem="e6N-mw-S35" secondAttribute="bottom" constant="20" id="Xrw-BH-9lO"/>
                     <constraint firstItem="12H-tv-ywa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="YiO-qQ-JFq"/>
                     <constraint firstAttribute="trailing" secondItem="e6N-mw-S35" secondAttribute="trailing" constant="24" id="Zku-UM-llD"/>
-                    <constraint firstItem="DqP-Vx-FH5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="24" id="cRE-kB-6rV"/>
                     <constraint firstItem="JbG-SD-1pM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="32" id="dFg-kr-ZCO"/>
-                    <constraint firstItem="yMB-nC-nze" firstAttribute="leading" secondItem="DqP-Vx-FH5" secondAttribute="leading" id="eep-Nj-GjU"/>
                     <constraint firstItem="JbG-SD-1pM" firstAttribute="top" secondItem="JCv-bV-ULs" secondAttribute="bottom" constant="20" id="qGR-je-7HQ"/>
-                    <constraint firstAttribute="trailing" secondItem="DqP-Vx-FH5" secondAttribute="trailing" constant="24" id="qfn-ar-fsq"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="humidityLabel" destination="JCv-bV-ULs" id="IFQ-7u-51H"/>
-                <outlet property="mapNavigationButton" destination="DqP-Vx-FH5" id="ZFw-PQ-u7C"/>
                 <outlet property="maxTemperatureLabel" destination="UhD-lR-xhJ" id="dWJ-07-qPS"/>
                 <outlet property="minTemperatureLabel" destination="dlN-Hp-brb" id="yVo-K3-9RX"/>
                 <outlet property="weatherImage" destination="yMB-nC-nze" id="BT8-Ol-Diy"/>

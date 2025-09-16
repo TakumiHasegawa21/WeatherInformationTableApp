@@ -16,7 +16,6 @@ final class WeatherInformationTableViewCell: UITableViewCell {
     @IBOutlet private weak var minTemperatureLabel: UILabel!
     @IBOutlet private weak var humidityLabel: UILabel!
     @IBOutlet private weak var windSpeedLabel: UILabel!
-    @IBOutlet private weak var mapNavigationButton: UIButton!
     @IBOutlet private weak var weatherImage: UIImageView!
 
     // MARK: - Initialize
